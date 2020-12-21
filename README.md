@@ -5,7 +5,7 @@ Xây dựng website " Quản lý và đặt phòng HomeStay
 với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khách hàng của bạn trải nghiệm và đặt phòng nhanh chóng hơn
 
 
-- Mô tả chức năng
+- Mô tả chức năng<br>
 	1.Khách hàng
 	+ Có thể book phòng trên website.
 	+ Chọn loại phòng và giá phòng phù hợp với nhu cầu của khách hàng.
@@ -16,7 +16,7 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	2.Admin
 	+ Quản lý phòng.
 	+ Quản lý dịch vụ.
-	+ Quản lý chương trình khuyến mãi.
+	+ Quản lý chương trình khuyến mãi.<br>
 	3.Giao diện
 	- Xây dưng giao diện phù hợp với mục đích, yêu cầu của trang web.
 - Công nghệ sử dụng
