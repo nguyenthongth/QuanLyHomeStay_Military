@@ -23,5 +23,5 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	+ PHP
 	+ MySQL
 	+HTML/CSS/JavaScript
-	+Boottrap.
+	+Bootstrap.
 	+Ajax
