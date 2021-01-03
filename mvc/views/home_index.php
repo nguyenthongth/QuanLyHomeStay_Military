@@ -14,9 +14,9 @@
         <link rel="alternate" href="https://demo.sweetsoft.vn/masova-hotel/index.htm" hreflang="vi-en" />
         <link href="https://demo.sweetsoft.vn/masova-hotel/index.htm" rel="canonical" id="canonicalLink" />
   
-        <link rel="stylesheet" type="text/css" href="../../public/assets/css/contact.css" />
-        <link rel="stylesheet" type="text/css" href="../../public/assets/css/home.css" />\
-        <link rel="stylesheet" type="text/css" href="../../public/assets/css/room-list.css" />
+        <link rel="stylesheet" type="text/css" href="public/assets/css/contact.css" />
+        <link rel="stylesheet" type="text/css" href="public/assets/css/home.css" />\
+        <link rel="stylesheet" type="text/css" href="public/assets/css/room-list.css" />
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
