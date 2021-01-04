@@ -2,15 +2,17 @@
 class lienhe extends controler{
 
     public $doituong;
+    public $home1 ; 
 // ham contructor 
     public function __construct()
     {
         $this->doituong = $this->model("lienheModel");
+        $this->home1 = $this->model("homeModel");
     }
 
     // ham Start
     public function home(){
-        $this->view("home_index",["page"=>"lien_he_view"]);
+        $this->view("home_index",["page"=>"lien_he_view","listroom"=>$this->home1->getListRoom()]);
     }
 
     // thêm lời nhắn từ khách hàng 

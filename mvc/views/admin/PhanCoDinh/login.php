@@ -1,7 +1,7 @@
 <div class="limiter">
 		<div class="container-login100 page-background">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="./login/login_user" method="POST">
+				<form class="login100-form validate-form" action="./admin" method="POST">
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-flower"></i>
 					</span>

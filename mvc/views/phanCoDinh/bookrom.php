@@ -3,7 +3,7 @@
         <!-- end btn scroll top -->
 
         <!-- btn show book room -->
-        <button type="button" class="btnType1 btnShowBookRoom" name="book-room">Đặt ngay</button>
+        <button type="button" class="btnType1 btnShowBookRoom" name="book-room">Book now</button>
         <!-- end btn show book room -->
 
         <!-- modal form book room -->
@@ -132,7 +132,7 @@
     
                                 <div class="col-md-12 colInputBookRoom colBtnBookRoom">
                                     <div class="contentInputBookRoom">
-                                        <button type="submit" name="datngay" class="btnType1 btnBookNowRoomForm">Book now 1</button>
+                                        <button type="submit" name="datngay" class="btnType1 btnBookNowRoomForm">Đặt Phòng Ngay</button>
                                     </div>
                                 </div>
                             </div>

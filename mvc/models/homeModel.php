@@ -15,7 +15,7 @@ class homeModel extends connectDB{
         } else {
             echo "0 results";
         }
-     return $listroom;
+        return $listroom;
 
     }
    

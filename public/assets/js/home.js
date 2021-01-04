@@ -92,19 +92,19 @@ $('.btnShowBookRoom').on('click', function() {
     $('#modalFormBookRoom').modal('show')
 });
 
-$('.inputFrmNumberAdult').on('change', function() {
-    if($('.inputNumberAdult').length) {
-        var valNumber = $('.inputFrmNumberAdult').val();
-        $('.inputNumberAdult').val(valNumber);
-    }
-});
+                $('.inputFrmNumberAdult').on('change', function() {
+                    if($('.inputNumberAdult').length) {
+                        var valNumber = $('.inputFrmNumberAdult').val();
+                        $('.inputNumberAdult').val(valNumber);
+                    }
+                });
 
-$('.inputFrmNumberChildren').on('change', function() {
-    if($('.inputNumberChildren').length) {
-        var valNumber = $('.inputFrmNumberChildren').val();
-        $('.inputNumberChildren').val(valNumber);
-    }
-});
+                $('.inputFrmNumberChildren').on('change', function() {
+                    if($('.inputNumberChildren').length) {
+                        var valNumber = $('.inputFrmNumberChildren').val();
+                        $('.inputNumberChildren').val(valNumber);
+                    }
+                });
 // end book a room
 
 window.addEventListener("load", function(event) {    

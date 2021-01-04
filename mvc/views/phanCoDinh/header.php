@@ -10,7 +10,9 @@
                         </a>
 
                         <h1 class="wrapLogoHeaderBottom">
-                            <a class="linkLogoHeaderBottom" href="index.htm" title="Masova Hotel"><img src="public/assets/images/logo.png" class="imgLogoHeaderBottom" alt="Masova Hotel" /></a>
+                            <a class="linkLogoHeaderBottom" href="./home_index" title="Masova Hotel">
+                            <img src="public/assets/images/logo.png" class="imgLogoHeaderBottom" 
+                            alt="Masova Hotel" /></a>
                         </h1>
 
                         <div class="wrapBtnBookRoomHeader">
@@ -45,7 +47,7 @@
                                 </li>
 
                                 <li class="listItemMenuMainHeaderBottom">
-                                    <a class="listLinkMenuMainHeaderBottom" href="ds-dich-vu.htm" title="Dịch vụ">Dịch vụ</a>
+                                    <a class="listLinkMenuMainHeaderBottom" href="./dichvu" title="Dịch vụ">Dịch vụ</a>
                                 </li>
 
                                 <li class="listItemMenuMainHeaderBottom">

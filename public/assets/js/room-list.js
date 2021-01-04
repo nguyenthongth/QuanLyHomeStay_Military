@@ -81,19 +81,19 @@ $('.menuLanguageHeaderBottom').on('click', function(e) {
 // end menu
 
 // book a room
-$('.btnShowBookRoom').on('click', function(e) {
-    $('#modalFormBookRoom').modal('show')
-});
+            $('.btnShowBookRoom').on('click', function(e) {
+                $('#modalFormBookRoom').modal('show')
+            });
 // end book a room
 
 // select room
-$('.btnBookRoomDetail').on('click', function(e) {
-    if($('.formControlRoomSelect').length) {
-        var dataRoom = parseInt($(this).attr('data-room'));
+        $('.btnBookRoomDetail').on('click', function(e) {
+            if($('.formControlRoomSelect').length) {
+                var dataRoom = parseInt($(this).attr('data-room'));
 
-        $('.formControlRoomSelect').val(dataRoom);
-    }    
-});
+                $('.formControlRoomSelect').val(dataRoom);
+            }    
+        });
 // end select room
 
 window.addEventListener("load", function(event) {    
@@ -104,6 +104,7 @@ window.addEventListener("load", function(event) {
     // start slide main
     if($('.showSlideRoomDetail').length){
         $('.showSlideRoomDetail').slick({
+            //autoplay: true,
             pauseOnHover: false,
             pauseOnFocus: false,
             fade: true,

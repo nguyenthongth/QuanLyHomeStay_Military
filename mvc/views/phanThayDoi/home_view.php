@@ -190,7 +190,9 @@
 
                             <div class="col colInputBookRoom colBtnBookRoom">
                                 <div class="contentInputBookRoom">
-                                    <button type="button" name="book-now" class="btnType1 btnBookNowRoomForm" data-toggle="modal" data-target="#modalFormBookRoom">Book now</button>
+                                    <button type="button" name="book-now" 
+                                    class="btnType1 btnBookNowRoomForm" 
+                                    data-toggle="modal" data-target="#modalFormBookRoom">Book now</button>
                                     <button type="button" name="cancel-book" class="btnType2 btnCancelBookRoom">Hủy</button>
                                 </div>
                             </div>
@@ -633,3 +635,6 @@
             </div>
         </div>
 
+
+        <script src="public/assets/js/home.js"></script> 
+       

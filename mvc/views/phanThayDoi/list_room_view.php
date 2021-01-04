@@ -294,3 +294,5 @@
             </div>
         </div>
         <!-- end room list -->
+        <script src="public/assets/js/room-list.js"></script>
+     
