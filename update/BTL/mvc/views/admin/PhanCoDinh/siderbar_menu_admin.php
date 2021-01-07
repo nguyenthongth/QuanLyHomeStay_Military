@@ -177,15 +177,11 @@
 	                                    </a>
 	                                </li>
 	                                <li class="nav-item">
-	                                    <a href="all_rooms.html" class="nav-link ">
+	                                    <a href="./admin/viewThuocTinh" class="nav-link ">
 	                                        <span class="title">Xem Danh Sách</span>
 	                                    </a>
 	                                </li>
-	                                <li class="nav-item">
-	                                    <a href="edit_room.html" class="nav-link ">
-	                                        <span class="title">Edit Room Details</span>
-	                                    </a>
-	                                </li>
+	                                
 	                            </ul>
 	                        </li>
 							<!--end thuoc tinh -->
