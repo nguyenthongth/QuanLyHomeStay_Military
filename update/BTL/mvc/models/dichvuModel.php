@@ -17,7 +17,7 @@ class dichvuModel extends connectDB{
         } else {
             echo "0 results";
         }
-        return $danhsach;
+        return json_encode($danhsach);
 
     }
 
