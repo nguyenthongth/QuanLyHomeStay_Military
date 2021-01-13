@@ -2,7 +2,7 @@
 <html lang="vi">
     <head>
         <meta charset="utf-8" />
-        <base href="http://localhost:8012/BTL/home_index">
+        <base href="http://localhost/BTL/home_index">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -19,6 +19,7 @@
         <link rel="stylesheet" type="text/css" href="public/assets/css/room-list.css" />
         <link rel="stylesheet" type="text/css" href="public/assets/css/service-list.css" />
         <link rel="stylesheet" type="text/css" href="public/assets/css/service-detail.css" />
+        <link rel="stylesheet" type="text/css" href="public/assets/css/promotion-detail.css" />
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

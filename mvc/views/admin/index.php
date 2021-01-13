@@ -8,7 +8,7 @@
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li class="active">Dashboard</li>
+                                <li class="active">Trang Chủ</li>
                             </ol>
                         </div>
                     </div>
@@ -90,173 +90,7 @@
 					      </div>
 						</div>
 					<!-- end widget -->
-                     <!-- chart start -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card card-box">
-                                <div class="card-head">
-                                    <header>Chart Survey</header>
-                                    <div class="tools">
-                                        <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
-										<a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-										<a class="t-close btn-color fa fa-times" href="javascript:;"></a>
-                                    </div>
-                                </div>
-                                <div class="card-body no-padding height-9">
-                                    <div class="row text-center">
-			                            <div class="col-sm-3 col-6">
-			                                <h4 class="margin-0">$ 209 </h4>
-			                                <p class="text-muted"> Today's Income</p>
-			                            </div>
-			                            <div class="col-sm-3 col-6">
-			                                <h4 class="margin-0">$ 837 </h4>
-			                                <p class="text-muted">This Week's Income</p>
-			                            </div>
-			                            <div class="col-sm-3 col-6">
-			                                <h4 class="margin-0">$ 3410 </h4>
-			                                <p class="text-muted">This Month's Income</p>
-			                            </div>
-			                            <div class="col-sm-3 col-6">
-			                                <h4 class="margin-0">$ 78,000 </h4>
-			                                <p class="text-muted">This Year's Income</p>
-			                            </div>
-			                        </div>
-                       				<div class="row">
-                                       	<div id="area_line_chart" class="width-100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <!-- Chart end -->
-                    <div class="row">
-                        <div class="col-md-4 col-sm-12 col-12">
-                            <div class="card bg-info">
-			                    <div class="text-white py-3 px-4">
-			                      <h6 class="card-title text-white mb-0">Page View</h6>
-			                      <p>7582</p>
-			                      <div id="sparkline26"></div>
-			                      <small class="text-white">View Details</small>
-			                    </div>
-			                  </div>
-			                  <div class="card bg-success">
-			                    <div class="text-white py-3 px-4">
-			                      <h6 class="card-title text-white mb-0">Earning</h6>
-			                      <p>3669.25</p>
-			                      <div id="sparkline27"></div>
-			                      <small class="text-white">View Details</small>
-			                    </div>
-			                  </div>
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-12">
-                        	<div class="card  card-box">
-                                <div class="card-head">
-                                    <header>Notifications</header>
-                                    <div class="tools">
-                                        <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
-	                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-	                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
-                                    </div>
-                                </div>
-                                <div class="card-body no-padding height-9">
-                                    <div class="row">
-                                        <div class="noti-information notification-menu">
-                                            <div class="notification-list mail-list not-list small-slimscroll-style">
-                                                <a href="javascript:;" class="single-mail"> <span class="icon bg-primary"> <i class="fa fa-user-o"></i>
-												</span> <span class="text-purple">Abhay Jani</span> Added you as friend
-                                                    <span class="notificationtime">
-                                                        <small>Just Now</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon blue-bgcolor"> <i class="fa fa-envelope-o"></i>
-												</span> <span class="text-purple">John Doe</span> send you a mail
-                                                    <span class="notificationtime">
-                                                        <small>Just Now</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon bg-success"> <i class="fa fa-check-square-o"></i>
-												</span> Success Message
-                                                    <span class="notificationtime">
-                                                        <small> 2 Days Ago</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon bg-warning"> <i class="fa fa-warning"></i>
-												</span> <strong>Database Overloaded Warning!</strong>
-                                                    <span class="notificationtime">
-                                                        <small>1 Week Ago</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon bg-primary"> <i class="fa fa-user-o"></i>
-												</span> <span class="text-purple">Abhay Jani</span> Added you as friend
-                                                    <span class="notificationtime">
-                                                        <small>Just Now</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon blue-bgcolor"> <i class="fa fa-envelope-o"></i>
-												</span> <span class="text-purple">John Doe</span> send you a mail
-                                                    <span class="notificationtime">
-                                                        <small>Just Now</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon bg-success"> <i class="fa fa-check-square-o"></i>
-												</span> Success Message
-                                                    <span class="notificationtime">
-                                                        <small> 2 Days Ago</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon bg-warning"> <i class="fa fa-warning"></i>
-												</span> <strong>Database Overloaded Warning!</strong>
-                                                    <span class="notificationtime">
-                                                        <small>1 Week Ago</small>
-                                                    </span>
-                                                </a>
-                                                <a href="javascript:;" class="single-mail"> <span class="icon bg-danger"> <i class="fa fa-times"></i>
-												</span> <strong>Server Error!</strong>
-                                                    <span class="notificationtime">
-                                                        <small>10 Days Ago</small>
-                                                    </span>
-                                                </a>
-                                            </div>
-											<div class="full-width text-center p-t-10" >
-												<button type="button" class="btn purple btn-outline btn-circle margin-0">View All</button>
-											</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-12 col-12">
-                            <div class="card  card-box">
-                                <div class="card-head">
-                                    <header>Earning</header>
-                                    <div class="tools">
-                                        <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
-	                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-	                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
-                                    </div>
-                                </div>
-                                <div class="card-body no-padding height-9">
-                                    <div class="row text-center">
-			                            <div class="col-sm-4 col-6">
-			                                <h4 class="margin-0">$ 209 </h4>
-			                                <p class="text-muted"> Today</p>
-			                            </div>
-			                            <div class="col-sm-4 col-6">
-			                                <h4 class="margin-0">$ 837 </h4>
-			                                <p class="text-muted">This Week</p>
-			                            </div>
-			                            <div class="col-sm-4 col-6">
-			                                <h4 class="margin-0">$ 3410 </h4>
-			                                <p class="text-muted">This Month</p>
-			                            </div>
-			                        </div>
-			                        <div class="row">
-                                        <div id="donut_chart" class="width-100 height-250"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                      <!-- start Payment Details -->
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
@@ -275,169 +109,65 @@
 											<table class="table display product-overview mb-30" id="support_table5">
 												<thead>
 													<tr>
-														<th>No</th>
+														<th>STT</th>
 														<th>Name</th>
-														<th>Check In</th>
-														<th>Check Out</th>
+														<th>SDT</th>
+														<th>Ngày Đặt</th>
+														<th>Room</th>														
 														<th>Status</th>
-														<th>Phone</th>
-														<th>Room Type</th>
-														<th>Edit</th>
+														<th>Action</th>
 													</tr>
 												</thead>
 												<tbody>
-													<tr>
-														<td>1</td>
-														<td>Jens Brincker</td>
-														<td>23/05/2016</td>
-														<td>27/05/2016</td>
-														<td>
-															<span class="label label-sm label-success">paid</span>
-														</td>
-														<td>123456789</td>
-														<td>Single</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
+
+												<!-- chi tiết danh sách -->
+												<?php 
+												if(isset($data["booking_room"])){
+													$list_booking = json_decode($data["booking_room"],true); $number = 1; 
+														if(!empty($list_booking)){
+															foreach($list_booking as $row){ 
+																echo "<tr>";
+																echo "<td> $number </td>";
+																echo "<td>".$row['ho_ten']." </td>";
+																echo "<td>".$row['sdt']." </td>";
+																echo "<td>".$row['thoi_gian_dat']." </td>";
+																echo "<td>".$row['ma_phong']." </td>";
+																$status = $row["trang_thai"];
+																if($status =="0"){
+																	echo "<td> Chờ Xác Nhận </td>";
+																	echo'<td>
+																<a href="./admin/xacnhan/'.$row["ma_dat_phong"].'/'.$row["trang_thai"].'" class="btn btn-tbl-primary btn-xs">
+																<i class="fa fa-check" ></i>
+																</a>
+																<a href="./admin/editbooking/'.$row["ma_dat_phong"].'" class="btn btn-tbl-edit btn-xs">
+																	<i class="fa fa-pencil"></i>
+																</a>
+																<button class="btn btn-tbl-delete btn-xs" onclick="deletebooking('.$row["ma_dat_phong"].')">
 																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td>Mark Hay</td>
-														<td>24/05/2017</td>
-														<td>26/05/2017</td>
-														<td>
-															<span class="label label-sm label-warning">unpaid </span>
-														</td>
-														<td>123456789</td>
-														<td>Double</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
+																</button>															
+																</td>';
+																$number ++;
+																}else if($status =="1"){
+																	echo "<td> Đã Xác Nhận </td>";
+																	echo'<td>
+																
+																<a href="./admin/editbooking/'.$row["ma_dat_phong"].'" class="btn btn-tbl-edit btn-xs">
+																	<i class="fa fa-pencil"></i>
+																</a>
+																<button class="btn btn-tbl-delete btn-xs" onclick="deletebooking('.$row["ma_dat_phong"].')">
 																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td>Anthony Davie</td>
-														<td>17/05/2016</td>
-														<td>21/05/2016</td>
-														<td>
-															<span class="label label-sm label-success ">paid</span>
-														</td>
-														<td>123456789</td>
-														<td>Queen</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
-																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
-													<tr>
-														<td>4</td>
-														<td>David Perry</td>
-														<td>19/04/2016</td>
-														<td>20/04/2016</td>
-														<td>
-															<span class="label label-sm label-danger">unpaid</span>
-														</td>
-														<td>123456789</td>
-														<td>King</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
-																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
-													<tr>
-														<td>5</td>
-														<td>Anthony Davie</td>
-														<td>21/05/2016</td>
-														<td>24/05/2016</td>
-														<td>
-															<span class="label label-sm label-success ">paid</span>
-														</td>
-														<td>123456789</td>
-														<td>Single</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
-																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
-													<tr>
-														<td>6</td>
-														<td>Alan Gilchrist</td>
-														<td>15/05/2016</td>
-														<td>22/05/2016</td>
-														<td>
-															<span class="label label-sm label-warning ">unpaid</span>
-														</td>
-														<td>123456789</td>
-														<td>King</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
-																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
-													<tr>
-														<td>7</td>
-														<td>Mark Hay</td>
-														<td>17/06/2016</td>
-														<td>18/06/2016</td>
-														<td>
-															<span class="label label-sm label-success ">paid</span>
-														</td>
-														<td>123456789</td>
-														<td>Single</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
-																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
-													<tr>
-														<td>8</td>
-														<td>Sue Woodger</td>
-														<td>15/05/2016</td>
-														<td>17/05/2016</td>
-														<td>
-															<span class="label label-sm label-danger">unpaid</span>
-														</td>
-														<td>123456789</td>
-														<td>Double</td>
-														<td>
-															<a href="edit_booking.html" class="btn btn-tbl-edit btn-xs">
-																<i class="fa fa-pencil"></i>
-															</a>
-															<button class="btn btn-tbl-delete btn-xs">
-																<i class="fa fa-trash-o "></i>
-															</button>
-														</td>
-													</tr>
+																</button>															
+																</td>';
+																$number ++;
+																}
+																
+																echo "</tr>";
+															}
+														}
+													}
+												?>
+												
+												<!--end chi tiết danh sách -->
 												</tbody>
 											</table>
 										</div>
@@ -1062,4 +792,25 @@
                 </div>
             </div>
             <!-- end chat sidebar -->
+
+<!-- scrip in here--> 
+<script>
+ function deletebooking(ma){
+			swal({
+		title: "Delete booking?",
+		text: "Bạn chắc chắn muốn xóa booking này chứ!",
+		icon: "warning",
+		buttons: true,
+		dangerMode: true,
+		})
+		.then((willDelete) => {
+		if (willDelete) {
+			window.location = "./admin/deletebooking/"+ma;
+		} else {
+			swal("Quyết định của bạn thật tuyệt vời!");
+		}
+		});
+ }
+
+</script>
         

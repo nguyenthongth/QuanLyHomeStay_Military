@@ -34,7 +34,7 @@
 
                                     <div class="wrapListMenuSubHeaderBottom">
                                         <ul class="listMenuSubHeaderBottom">
-                                            <?php $listroom = $data["listroom"] ?>
+                                            <?php $listroom =json_decode( $data["listroom"],true) ?>
                                             <?php foreach($listroom as $row) { ?>
                                             <li class="listItemMenuSubHeaderBottom">
                                             <a class="listLinkMenuSubHeaderBottom"
@@ -51,7 +51,7 @@
                                 </li>
 
                                 <li class="listItemMenuMainHeaderBottom">
-                                    <a class="listLinkMenuMainHeaderBottom" href="ds-khuyen-mai.htm" title="Khuyến mãi">Khuyến mãi</a>
+                                    <a class="listLinkMenuMainHeaderBottom" href="./khuyenmai" title="Khuyến mãi">Khuyến mãi</a>
                                 </li>
 
                                 <li class="listItemMenuMainHeaderBottom menuSubHeaderBottom">

@@ -10,7 +10,6 @@ class dichvu extends controler{
     }
 
     // Goi ham mac dinh 
-
     function home(){
 
         $this->view("home_index",["page"=>"list_dich_vu_view",

@@ -25,9 +25,10 @@
                 <div class="contentPageServiceList">
                     <div class="row rowPageServiceList">
 
-                    <?php $danhsach = $data["dichvu"]; ?>
+                    <?php $danhsach = json_decode($data["dichvu"],true); ?>
 
                     <?php foreach($danhsach as $row) { ?>
+            
                     <!-- anh mot card view -->
                         <div class="col-sm-6 col-lg-4 elementSlideLatestNews">
                             <a href="dich-vu.htm" title="GYM" class="wrapImgResize imgSquare wrapImgItemLatestNews">

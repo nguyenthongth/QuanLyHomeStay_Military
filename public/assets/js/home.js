@@ -257,3 +257,4 @@ $(window).on('scroll', function() {
     fixedMenu();
     showBtnScrollTop();
 });
+

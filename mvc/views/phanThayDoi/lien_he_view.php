@@ -117,7 +117,7 @@
 
 	        							<h3 class="textSendMessage">Nếu bạn có bất kỳ câu hỏi nào, vui lòng gửi tin nhắn với của chúng tôi. Chúng tôi luôn ở đây để trả lời câu hỏi của bạn.</h4>
 
-	        						<form action="./lienhe/tinnhan" method="POST"> 
+	        						<form action="./lienhe/tinnhan" method="POST" name="lien_he_form" onsubmit=" return check_lh()"> 
 									<div class="form-group">
 											<label class="titleInputSendMessage">Họ và tên</label>
 											<input type="text" class="form-control" name="hoten" />
@@ -125,7 +125,7 @@
 
 										<div class="form-group">
 											<label class="titleInputSendMessage">Email</label>
-											<input type="mail" class="form-control" name="email"/>
+											<input type="email" class="form-control" name="email"/>
 										</div>
 
 										<div class="form-group">
@@ -161,7 +161,7 @@
 		<!-- end page contact -->
 
 
-
+		<script src="public/assets/js/contact.js"></script>
 		<!-- Ngoại vi cho php java script -->
 	
 		<script type="text/javascript">
@@ -174,6 +174,34 @@
 			function them_that_bai(){
 				swal("Đã xảy ra lỗi! ",
 				"Chúng tôi không thể xử lý yêu cầu của bạn lúc này. Hãy thử lại hoặc liên hệ chúng tôi quan số điện thoại ! ");
+			}
+
+			function check_lh(){
+				var hoten = document.forms["lien_he_form"]["hoten"].value;
+				if (hoten== "") {
+					swal("Lỗi....!", 
+					"Vui lòng cho chúng tôi biết họ tên của bạn");
+					return false;
+				}
+				var email = document.forms["lien_he_form"]["email"].value;
+				if (email== "") {
+					swal("Lỗi....!", 
+					"Để lại email chúng tôi sẽ liên hệ lại với bạn");
+					return false;
+				}
+				var sdt = document.forms["lien_he_form"]["sdt"].value;
+				if (sdt== "") {
+					swal("Lỗi....!", 
+					"Để lại Số điện thoại chúng tôi sẽ liên hệ lại với bạn");
+					return false;
+				}
+				var noidung = document.forms["lien_he_form"]["noidung"].value;
+				if (noidung== "") {
+					swal("Lỗi....!", 
+					"Cho chúng tôi biết bạn muốn gì ở chúng tôi hay có bất kì câu hỏi nào?");
+					return false;
+				}
+				return true
 			}
 
 

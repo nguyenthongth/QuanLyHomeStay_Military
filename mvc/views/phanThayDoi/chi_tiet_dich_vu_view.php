@@ -47,7 +47,7 @@
 
                                     </div>
                                 </div>
-                                 <!-- slider hinh anh --> 
+                                 <!--end slider hinh anh --> 
                                 <div class="wrapSlideCtrRoomDetail">
                                     <div class="showSlideCtrRoomDetail">
                                     <?php $hinhanh1 = $data["hinhanh1"];?>

@@ -3,7 +3,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8" />
-	<base href="http://localhost:8012/btl/admin">
+	<base href="http://localhost/btl/admin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta name="description" content="Responsive Admin Template" />
@@ -33,6 +33,8 @@
     <link href="public/admin/assets/css/theme-color.css" rel="stylesheet" type="text/css" />
     <!-- Date Time item CSS -->
     <link rel="stylesheet" href="assets/plugins/material-datetimepicker/bootstrap-material-datetimepicker.css" />
+    <!-- data tables -->
+    <link href="public/admin/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css"/>
 	<!-- favicon -->
 	<link rel="shortcut icon" href="public/admin/assets/img/favicon.ico" /> 
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -87,6 +89,10 @@
     <!-- dropzone -->
     <script src="public/admin/assets/plugins/dropzone/dropzone.js" ></script>
     <script src="public/admin/assets/plugins/dropzone/dropzone-call.js" ></script>
+    <!-- data tables -->
+    <script src="public/admin/assets/plugins/datatables/jquery.dataTables.min.js" ></script>
+ 	<script src="public/admin/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js" ></script>
+ 	<script src="public/admin/assets/js/pages/table/table_data.js" ></script>
     <!-- end js include path -->
   </body>
 </html>

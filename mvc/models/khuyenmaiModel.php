@@ -1,13 +1,13 @@
-<?php
-class dichvuModel extends connectDB{
+<?php 
+class khuyenmaiModel extends connectDB{
 
-    // hàm lấy danh sách dịch vụ hiện có 
-    function getDichVu(){
-        $sql  = "SELECT  DISTINCT dich_vu.ma_dich_vu , dich_vu.tieu_de ,dich_vu.noi_dung , hinh_anh.image_anh
-        from dich_vu INNER JOIN hinh_anh 
-        WHERE dich_vu.ma_hinh_anh = hinh_anh.ma_hinh_anh GROUP by dich_vu.ma_dich_vu ";
-        $result  = $this->connect->query($sql);
 
+    // get all list promotion
+    function getAllPromotion(){
+        $sql  = "SELECT  DISTINCT khuyen_mai.ma_km , khuyen_mai.tieu_de ,khuyen_mai.noi_dung , hinh_anh.image_anh
+        from khuyen_mai INNER JOIN hinh_anh 
+        WHERE khuyen_mai.ma_hinh_anh = hinh_anh.ma_hinh_anh GROUP by khuyen_mai.ma_km ";
+        $result = $this->connect->query($sql);
         $danhsach = array();
         if ($result->num_rows > 0) {
            
@@ -15,31 +15,33 @@ class dichvuModel extends connectDB{
                 $danhsach[] = $row;
             }
         } else {
-            //echo "0 results";
+           // echo "0 results";
         }
         return json_encode($danhsach);
 
     }
 
-    // get chi tiết dịch vụ 
-    function getChiTietDichVu($ma){
-        $sql  = "SELECT * FROM dich_vu WHERE ma_dich_vu='$ma'";
-        $result  = $this->connect->query($sql);
-        $danhsach = array();
+    // get chi tiết  khuyến mâi
+    function getChiTietKM($ma){
+        $sql = "SELECT * FROM  khuyen_mai WHERE ma_km='$ma'";
+        $result = $this->connect->query($sql);
+
+        $one_km = array();
         if ($result->num_rows > 0) {
            
             while($row = $result->fetch_assoc()) {           
-                $danhsach[] = $row;
+                $one_km[] = $row;
             }
         } else {
-            echo "0 results";
+           // echo "0 results";
         }
-        return $danhsach;
+        return json_encode($one_km);
+
     }
 
-    // get thuoc tinh cho dich vu 
-    function getThuocTinh($ma_thuoc_tinh){
-        $sql =" SELECT * FROM thuoc_tinh WHERE ma_thuoc_tinh='$ma_thuoc_tinh'";
+    // get thuoc tinh cua khuyen mai 
+    function getThuocTinh_km($ma_tt){
+        $sql =" SELECT * FROM thuoc_tinh WHERE ma_thuoc_tinh='$ma_tt'";
         $result  = $this->connect->query($sql);
         $thuoctinh = array();
         if ($result->num_rows > 0) {
@@ -51,13 +53,11 @@ class dichvuModel extends connectDB{
         } else {
             echo "0 results";
         }
-        return $thuoctinh;
-
+        return json_encode($thuoctinh);
     }
 
-
-    // get danh sách hình ảnh 
-    function getHinhAnh($ma_hinh_anh){
+    // get danh sach hình ảnh cho khuyến mãi
+    function getHinhAnh_km($ma_hinh_anh){
         $sql =" SELECT * FROM hinh_anh WHERE ma_hinh_anh='$ma_hinh_anh'";
         $result  = $this->connect->query($sql);
         $hinh_anh = array();
@@ -70,9 +70,7 @@ class dichvuModel extends connectDB{
         } else {
             echo "0 results";
         }
-        return $hinh_anh;
+        return json_encode($hinh_anh);
     }
-
-
 }
-?>
+?> 

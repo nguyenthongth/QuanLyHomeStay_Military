@@ -21,44 +21,24 @@
 											
                                         </div>
                                         <div class="sidebar-userpic-btn">
-									        <a class="tooltips" href="user_profile.html" data-placement="top" data-original-title="Profile">
-									        	<i class="material-icons">person_outline</i>
-									        </a>
-									        <a class="tooltips" href="email_inbox.html" data-placement="top" data-original-title="Mail">
-									        	<i class="material-icons">mail_outline</i>
-									        </a>
-									        <a class="tooltips" href="chat.html" data-placement="top" data-original-title="Chat">
-									        	<i class="material-icons">chat</i>
-									        </a>
+									       
 									        <a class="tooltips" href="./admin/logout"  id="logout" data-placement="top" data-original-title="Logout">
 									        	<i class="material-icons">input</i>
 									        </a>
 									    </div>
 	                            </div>
 	                        </li>
-	                        <li class="menu-heading">
+	                        <!-- <li class="menu-heading">
 			                	<span>-- Main</span>
-			                </li>
+			                </li> -->
 	                        <li class="nav-item start active">
-	                            <a href="#" class="nav-link nav-toggle">
+	                            <a href="./admin" class="nav-link nav-toggle">
 	                                <i class="material-icons">dashboard</i>
-	                                <span class="title">Dashboard</span>
+	                                <span class="title">Trang Chủ</span>
                                 	<span class="selected"></span>
-                                	<span class="arrow open"></span>
+                                	
 	                            </a>
-	                            <ul class="sub-menu">
-	                                <li class="nav-item active">
-	                                    <a href="index.html" class="nav-link ">
-	                                        <span class="title">Dashboard 1</span>
-	                                        <span class="selected"></span>
-	                                    </a>
-	                                </li>
-	                                <li class="nav-item ">
-	                                    <a href="dashboard2.html" class="nav-link ">
-	                                        <span class="title">Dashboard 2</span>
-	                                    </a>
-	                                </li>
-	                            </ul>
+	                        
 	                        </li>
 	                        <li class="nav-item">
 	                            <a href="#" class="nav-link nav-toggle">
@@ -109,6 +89,7 @@
 	                                </li>
 	                            </ul>
 	                        </li>
+							<!-- phong -->
 	                        <li class="nav-item">
 	                            <a href="#" class="nav-link nav-toggle">
 	                                <i class="material-icons">vpn_key</i>
@@ -133,6 +114,60 @@
 	                                </li>
 	                            </ul>
 	                        </li>
+							<!--end phong -->
+
+							<!--start khuyen mai -->
+							<li class="nav-item">
+	                            <a href="#" class="nav-link nav-toggle">
+	                                <i class="material-icons">shopping_basket</i>
+	                                <span class="title">Khuyến Mãi</span>
+	                                <span class="arrow"></span>
+	                            </a>
+	                            <ul class="sub-menu">
+	                                <li class="nav-item">
+	                                    <a href="./admin/add_khuyenmai" class="nav-link ">
+	                                        <span class="title">Khuyến Mãi Mới</span>
+	                                    </a>
+	                                </li>
+	                                <li class="nav-item">
+	                                    <a href="all_rooms.html" class="nav-link ">
+	                                        <span class="title">Xem Danh Sách</span>
+	                                    </a>
+	                                </li>
+	                                <li class="nav-item">
+	                                    <a href="edit_room.html" class="nav-link ">
+	                                        <span class="title">Edit Room Details</span>
+	                                    </a>
+	                                </li>
+	                            </ul>
+	                        </li>
+							<!--end khuyen mai -->
+
+							<!--start thuoc tinh -->
+							<li class="nav-item">
+	                            <a href="#" class="nav-link nav-toggle">
+	                                <i class="material-icons">view_list</i>
+	                                <span class="title">Thuộc Tính</span>
+	                                <span class="arrow"></span>
+	                            </a>
+	                            <ul class="sub-menu">
+	                                <li class="nav-item">
+	                                    <a href="./admin/add_thuoctinh" class="nav-link ">
+	                                        <span class="title">Thuộc Tính Mới</span>
+	                                    </a>
+	                                </li>
+	                                <li class="nav-item">
+	                                    <a href="./admin/viewThuocTinh" class="nav-link ">
+	                                        <span class="title">Xem Danh Sách</span>
+	                                    </a>
+	                                </li>
+	                                
+	                            </ul>
+	                        </li>
+							<!--end thuoc tinh -->
+
+
+							<!-- hình ảnh-->
 	                        <li class="nav-item">
 	                            <a href="#" class="nav-link nav-toggle">
 	                                <i class="material-icons">insert_photo</i>
