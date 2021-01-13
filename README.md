@@ -10,9 +10,10 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	+ Có thể book phòng trên website.
 	+ Chọn loại phòng và giá phòng phù hợp với nhu cầu của khách hàng.
 	+ Đặt phòng.
-	+ Tìm Phòng.
-	+ Đặt dịch vụ.
-	+ Thanh toán.<br>
+	+ Hiển Thị Danh Sách Phòng.
+	+ Các khuyến mãi hiện có của homeStayQT
+	+ Các dịch vụ cung cấp của homeStayQT
+	+ Trang liên hệ.<br>
 	2.Admin
 	+ Quản lý phòng.
 	+ Quản lý dịch vụ.
