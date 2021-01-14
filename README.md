@@ -17,12 +17,12 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	2.Admin
 	+ Quản lý phòng.
 	+ Quản lý dịch vụ.
-	+ Quản lý chương trình khuyến mãi.<br>
+	<br>
 	3.Giao diện
 	- Xây dưng giao diện phù hợp với mục đích, yêu cầu của trang web.
 - Công nghệ sử dụng
-	+ PHP
+	+ PHP MVC
 	+ MySQL
 	+HTML/CSS/JavaScript
 	+Bootstrap.
-	+Ajax
+
