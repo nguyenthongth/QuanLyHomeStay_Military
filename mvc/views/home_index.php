@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Trang chủ | HomeStay QT</title>
 
-        <link rel="shortcut icon" type="image/x-icon" href="public/assets/images/icon.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="public/assets/images/logo1.png" />
         <link rel="icon" type="image/x-icon" href="public/assets/images/icon.png" />
         <link id="ImageLink" rel="image_src" type="image/jpg" href="https://demo.sweetsoft.vn/masova-hotel/public/assets/images/share.jpg" />
         <link rel="alternate" href="https://demo.sweetsoft.vn/masova-hotel/index.htm" hreflang="vi-en" />
@@ -16,11 +16,11 @@
   
         <link rel="stylesheet" type="text/css" href="public/assets/css/contact.css" />
         <link rel="stylesheet" type="text/css" href="public/assets/css/home.css" />
-        <link rel="stylesheet" type="text/css" href="public/assets/css/room-list.css" />
+       
         <link rel="stylesheet" type="text/css" href="public/assets/css/service-list.css" />
         <link rel="stylesheet" type="text/css" href="public/assets/css/service-detail.css" />
         <link rel="stylesheet" type="text/css" href="public/assets/css/promotion-detail.css" />
-
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 

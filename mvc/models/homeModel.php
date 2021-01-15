@@ -38,5 +38,40 @@ class homeModel extends connectDB{
 
     }
    
+
+    //  bannner loading 
+    function getbanner($ma){
+        $sql  = "SELECT * FROM hinh_anh WHERE ma_hinh_anh='$ma'";
+        $result = $this->connect->query($sql);
+        $info   = array();
+        if ($result->num_rows > 0) {
+            // show dữ liệu trên trang
+            while($row = $result->fetch_assoc()) {           
+                $info[] = $row;
+            }
+        } else {
+            echo "0 results";
+        }
+        return json_encode($info);
+    }
+
+    // show room demo
+
+    function loadRoom(){
+        $sql = "SELECT DISTINCT phong.ma_phong, phong.ten_phong, phong.noi_dung , phong.gia_phong, hinh_anh.image_anh
+        FROM phong INNER JOIN hinh_anh  WHERE phong.ma_hinh_anh = hinh_anh.ma_hinh_anh GROUP BY phong.ma_phong LIMIT 4";
+        $result = $this->connect->query($sql);
+        $info  = array();
+        if ($result->num_rows > 0) {
+            // show dữ liệu trên trang
+            while($row = $result->fetch_assoc()) {           
+                $info[] = $row;
+            }
+        } else {
+            echo "0 results";
+        }
+        return json_encode($info);
+        
+    }
 }
 ?>

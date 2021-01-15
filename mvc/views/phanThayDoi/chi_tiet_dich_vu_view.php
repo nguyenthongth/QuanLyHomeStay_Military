@@ -2,7 +2,7 @@
         <!-- breadcrumbs -->
         <div class="wrapBreadCrumb">
             <div class="wrapImgResize wrapImgBreadcrumb">
-                <img src="public/assets/images/breadcumb4.jpg" class="imgBreadcrumbs" alt="Hồ Bơi" />
+                <img src="public/assets/images/image_nen.jpg" class="imgBreadcrumbs"  />
             </div>
             <?php $dichvu = $data["chitietdichvu"];?>
             <div class="wrapTextBreadcrumb">
@@ -11,7 +11,7 @@
                     <?php foreach($dichvu as $row) {?>
                     <nav aria-label="breadcrumb" class="navListBreadcrumb">
                         <ol class="breadcrumb olListBreqadcrumb">
-                            <li class="breadcrumb-item itemListBreadcrumb"><a href="index.htm" class="linkListBreadcrumb" title="Trang chủ">Trang chủ</a></li>
+                            <li class="breadcrumb-item itemListBreadcrumb"><a href="./home_index" class="linkListBreadcrumb" title="Trang chủ">Trang chủ</a></li>
                             <li class="breadcrumb-item itemListBreadcrumb"><a href="ds-dich-vu.htm" class="linkListBreadcrumb" title="Dịch vụ">Dịch vụ</a></li>
                             <li class="breadcrumb-item itemListBreadcrumb active" aria-current="page"><?php echo $row["tieu_de"]?></li>
                         </ol>

@@ -1,7 +1,7 @@
 <!-- breadcrumbs -->
 <div class="wrapBreadCrumb">
             <div class="wrapImgResize wrapImgBreadcrumb">
-                <img src="public/assets/images/breadcumb3.jpg" class="imgBreadcrumbs" alt="Khuyến Mãi" />
+                <img src="public/assets/images/image_nen.jpg" class="imgBreadcrumbs" alt="Khuyến Mãi" />
             </div>
 
             <div class="wrapTextBreadcrumb">
@@ -10,7 +10,7 @@
 
                     <nav aria-label="breadcrumb" class="navListBreadcrumb">
                         <ol class="breadcrumb olListBreqadcrumb">
-                            <li class="breadcrumb-item itemListBreadcrumb"><a href="index.htm" class="linkListBreadcrumb" title="Trang chủ">Trang chủ</a></li>
+                            <li class="breadcrumb-item itemListBreadcrumb"><a href="./home_index" class="linkListBreadcrumb" title="Trang chủ">Trang chủ</a></li>
                             <li class="breadcrumb-item itemListBreadcrumb active" aria-current="page">Khuyến Mãi</li>
                         </ol>
                     </nav>

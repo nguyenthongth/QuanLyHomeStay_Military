@@ -2,15 +2,23 @@
 
 class home_index extends controler{
     public $doituong;
+    public $dichvu;
+    public $khuyenmai;
 
     public function __construct()
     {
         $this->doituong = $this->model("homeModel");
+        $this->dichvu = $this->model("dichvuModel");
+        $this->khuyenmai = $this->model("khuyenmaiModel");
     }
 
     public function home(){
-        $this->view("home_index",["page"=>"home_view"
-        ,"listroom"=>$this->doituong->getListRoom()]);
+        $this->view("home_index",["page"=>"home_view",
+        "banner_image"=>$this->doituong->getbanner("banner"),
+        "phong"=>$this->doituong->loadRoom(),
+        "dichvu"=>$this->dichvu->getDichVu(),
+        "khuyenmai"=>$this->khuyenmai->getAllPromotion(),
+        "listroom"=>$this->doituong->getListRoom()]);
     }
 
 
@@ -49,6 +57,10 @@ class home_index extends controler{
            $this->view("home_index",["page"=>"home_view",
            "result"=>$result,
            "madapphong"=>$ma_dat_p,
+           "banner_image"=>$this->doituong->getbanner("banner"),
+           "phong"=>$this->doituong->loadRoom(),
+           "dichvu"=>$this->dichvu->getDichVu(),
+           "khuyenmai"=>$this->khuyenmai->getAllPromotion(),
            "listroom"=>$this->doituong->getListRoom()]); 
 
         }

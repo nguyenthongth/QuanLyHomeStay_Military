@@ -96,76 +96,65 @@
                          
                         <!-- end notification dropdown -->
                         <!-- start message dropdown -->
+                        <?php if(isset($data["number_lienhe"])){
+                            $number_lienhe = json_decode($data["number_lienhe"],true);
+                            foreach($number_lienhe as $row_lh ){ ?>
+
+                          
  						<li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                 <i class="fa fa-envelope-o"></i>
-                                <span class="badge headerBadgeColor2"> 2 </span>
+                                <span class="badge headerBadgeColor2"> <?php echo$row_lh["soluong"] ?> </span>
                             </a>
                             <ul class="dropdown-menu animated slideInDown">
                                 <li class="external">
                                     <h3><span class="bold">Messages</span></h3>
-                                    <span class="notification-label cyan-bgcolor">New 2</span>
+                                    <span class="notification-label cyan-bgcolor">New <?php echo$row_lh["soluong"] ?></span>
                                 </li> 
+                                <?php }
+                                }?>
                                 <li>
-                                    <ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
-                                        <li style="background-color: #B0C4DE">
-                                            <a href="#">
-                                                <span class="photo">
-                                                	<img src="public/admin/assets/img/user/user2.jpg" class="img-circle" alt=""> </span>
-                                                <span class="subject">
-                                                	<span class="from"> Sarah Smith </span>
-                                                	<span class="time">Just Now </span>
-                                                </span>
-                                                <span class="message"> Jatin I found you on LinkedIn... </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                	<img src="public/admin/assets/img/user/user3.jpg" class="img-circle" alt=""> </span>
-                                                <span class="subject">
-                                                	<span class="from"> John Deo </span>
-                                                	<span class="time">16 mins </span>
-                                                </span>
-                                                <span class="message"> Fwd: Important Notice Regarding Your Domain Name... </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                	<img src="public/admin/assets/img/user/user1.jpg" class="img-circle" alt=""> </span>
-                                                <span class="subject">
-                                                	<span class="from"> Rajesh </span>
-                                                	<span class="time">2 hrs </span>
-                                                </span>
-                                                <span class="message"> pls take a print of attachments. </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                	<img src="public/admin/assets/img/user/user8.jpg" class="img-circle" alt=""> </span>
-                                                <span class="subject">
-                                                	<span class="from"> Lina Smith </span>
-                                                	<span class="time">40 mins </span>
-                                                </span>
-                                                <span class="message"> Apply for Ortho Surgeon </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span class="photo">
-                                                	<img src="public/admin/assets/img/user/user5.jpg" class="img-circle" alt=""> </span>
-                                                <span class="subject">
-                                                	<span class="from"> Jacob Ryan </span>
-                                                	<span class="time">46 mins </span>
-                                                </span>
-                                                <span class="message"> Request for leave application. </span>
-                                            </a>
-                                        </li>
+                                <ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
+                                    <?php if(isset($data["alllienhe"])){
+                                        $all_lien_he =json_decode($data["alllienhe"] ,true);
+                                        if(!empty($all_lien_he)){
+                                            foreach($all_lien_he as $row_all_lh){
+                                                $string_time = $row_all_lh["id_lien_he"];
+                                                $time_lh = substr($string_time,0,2).":".substr($string_time,2,2);
+                                                $ngay_lh = $row_all_lh["ngay"];
+                                                if($row_all_lh["trang_thai"] == 0){
+                                                    echo ' <li style="background-color: #B0C4DE">
+                                                    <a href="./admin/getAll_lien_he/'.$row_all_lh['id_lien_he'].'">
+                                                        <span class="photo">
+                                                            <img src="public/admin/assets/img/user/user2.jpg" class="img-circle" alt=""> </span>
+                                                        <span class="subject">
+                                                            <span class="from"> '.$row_all_lh["ho_ten"].'  </span>
+                                                            <span class="time">'.$time_lh."   ".$ngay_lh.' </span>
+                                                        </span>
+                                                        <span class="message"> Đã gửi cho bạn bạn một tin nhắn </span>
+                                                    </a>
+                                                </li>';
+                                                }else{
+                                                    echo ' <li >
+                                                    <a href="./admin/getAll_lien_he/'.$row_all_lh['id_lien_he'].'">
+                                                        <span class="photo">
+                                                            <img src="public/admin/assets/img/user/user2.jpg" class="img-circle" alt=""> </span>
+                                                        <span class="subject">
+                                                            <span class="from"> '.$row_all_lh["ho_ten"].'  </span>
+                                                            <span class="time">'.$time_lh."   ".$ngay_lh.' </span>
+                                                        </span>
+                                                        <span class="message"> Đã gửi cho bạn bạn một tin nhắn </span>
+                                                    </a>
+                                                </li>';
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                     ?>                                                                     
                                     </ul>
                                     <div class="dropdown-menu-footer">
-                                        <a href="#"> All Messages </a>
+                                        <a href="#"> Xem tất cả tin nhắn </a>
                                     </div>
                                 </li>
                             </ul>

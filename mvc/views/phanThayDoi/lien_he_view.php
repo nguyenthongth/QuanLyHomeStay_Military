@@ -2,7 +2,7 @@
  <!-- breadcrumbs -->
         <div class="wrapBreadCrumb">
             <div class="wrapImgResize wrapImgBreadcrumb">
-                <img src="public/assets/images/breadcumb1.jpg" class="imgBreadcrumbs" alt="Liên Hệ" />
+                <img src="public/assets/images/image_nen.jpg" class="imgBreadcrumbs" alt="Liên Hệ" />
             </div>
 
             <div class="wrapTextBreadcrumb">
@@ -11,7 +11,8 @@
 
                     <nav aria-label="breadcrumb" class="navListBreadcrumb">
                         <ol class="breadcrumb olListBreqadcrumb">
-                            <li class="breadcrumb-item itemListBreadcrumb"><a href="index.htm" class="linkListBreadcrumb" title="Trang chủ">Trang chủ</a></li>
+                            <li class="breadcrumb-item itemListBreadcrumb"><a href="./home_index" 
+							class="linkListBreadcrumb" >Trang chủ</a></li>
                             <li class="breadcrumb-item itemListBreadcrumb active" aria-current="page">Liên Hệ</li>
                         </ol>
                     </nav>
@@ -38,10 +39,9 @@
 
 									<div class="media-body">
                                         <div class="wrapTextItemContact">
-                                            <p>100A8 - 100A9, Trần Phú, Lộc Thọ, Thành phố Nha Trang, Khánh Hòa</p>
+                                            <p>07 Mai Xuân Thưởng, Vĩnh Hải, Thành phố Nha Trang, Khánh Hòa</p>
 
-                                            <p><a href="https://www.google.com/maps/place/MASOVA+HOTEL/@12.2264158,109.2001686,15z/data=!4m2!3m1!1s0x0:0x2896ab179721dcf0?sa=X&ved=2ahUKEwj25p_227jsAhVXc3AKHbHvAQkQ_BIwDHoECBYQBQ" title="100A8 - 100A9, Trần Phú, Lộc Thọ, Thành phố Nha Trang, Khánh Hòa" target="_blank">Xem bản đồ</a></p>
-                                        </div>
+                                            </div>
 									</div>
 								</div>
         					</div>
@@ -60,7 +60,7 @@
 
 									<div class="media-body">
                                         <div class="wrapTextItemContact">
-                                            <p><a href="tel:02583905999" title="0258 3905 999">0258 3905 999</a></p>
+                                            <p><a href="tel:02588688888" >0258 8688 888</a></p>
                                         </div>										
 									</div>
 								</div>
@@ -80,7 +80,7 @@
 
 									<div class="media-body">
                                         <div class="wrapTextItemContact">
-                                            <p><a href="mailto:info@gmail.com" title="info@gmail.com">info@gmail.com</a></p>
+                                            <p><a href="mailto:info@homestayqt.com" title="info@homestayqt.com">info@homestayqt.com</a></p>
                                         </div>										
 									</div>
 								</div>
@@ -150,7 +150,7 @@
 							4971829354045!2d109.19692711434793!3d12.282268532952468!2m3!1f0!2f0!3f0!
 							3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317067442c251b73%3A0x7278b5d170460f7!
 							2sAnh%20Qu%C3%A2n%20Tr123!5e0!3m2!1sen!2s!4v1609477233384!5m2!1sen!2s" 
-							width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+							width="600" height="700" frameborder="0" style="border:0;" allowfullscreen=""
 							 aria-hidden="false" tabindex="0"></iframe>
         					</div>
         				</div>

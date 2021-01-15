@@ -1,7 +1,7 @@
 <!-- breadcrumbs -->
 <div class="wrapBreadCrumb">
             <div class="wrapImgResize wrapImgBreadcrumb">
-                <img src="public/assets/images/breadcumb4.jpg" class="imgBreadcrumbs" alt="Combo hè mát lạnh 300,000 VNĐ" />
+                <img src="public/assets/images/image_nen.jpg" class="imgBreadcrumbs" alt="Combo hè mát lạnh 300,000 VNĐ" />
             </div>
             <?php $ct  = json_decode($data["chitietkhuyenmai"],true);
                                 foreach($ct as $row) {?>

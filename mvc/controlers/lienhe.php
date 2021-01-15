@@ -29,7 +29,9 @@ class lienhe extends controler{
                 // goi đến model để insert dữ liệu
                 $ketqua = $this->doituong->themLienHe($hoten,$email,$sdt,$noidung,$id,$ngay);
                 echo $ketqua;
-                $this->view("home_index",["page"=>"lien_he_view","ketqua"=>$ketqua]);
+                $this->view("home_index",["page"=>"lien_he_view",
+                "listroom"=>$this->home1->getListRoom(),
+                "ketqua"=>$ketqua]);
         }
     }
 }

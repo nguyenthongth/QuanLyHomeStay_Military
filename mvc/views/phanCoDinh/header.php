@@ -10,9 +10,9 @@
                         </a>
 
                         <h1 class="wrapLogoHeaderBottom">
-                            <a class="linkLogoHeaderBottom" href="./home_index" title="Masova Hotel">
-                            <img src="public/assets/images/logo.png" class="imgLogoHeaderBottom" 
-                            alt="Masova Hotel" /></a>
+                            <a class="linkLogoHeaderBottom" href="./home_index" >
+                            <img src="public/assets/images/logoqt.png" class="imgLogoHeaderBottom" 
+                            /></a>
                         </h1>
 
                         <div class="wrapBtnBookRoomHeader">
@@ -38,7 +38,7 @@
                                             <?php foreach($listroom as $row) { ?>
                                             <li class="listItemMenuSubHeaderBottom">
                                             <a class="listLinkMenuSubHeaderBottom"
-                                             href="./room/room-don" name="<?php echo $row["ma_phong"]  ?>" >
+                                             href="./room/chitiet/<?php echo $row["ma_phong"]  ?>" name="<?php echo $row["ma_phong"]  ?>" >
                                              <?php echo $row["ten_phong"] ?></a></li>
 
                                             <?php } ?>

@@ -1,7 +1,7 @@
 <!-- breadcrumbs -->
 <div class="wrapBreadCrumb">
             <div class="wrapImgResize wrapImgBreadcrumb">
-                <img src="public/assets/images/breadcumb2.jpg" class="imgBreadcrumbs" alt="Dịch Vụ" />
+                <img src="public/assets/images/image_nen.jpg" class="imgBreadcrumbs" alt="Dịch Vụ" />
             </div>
 
             <div class="wrapTextBreadcrumb">

@@ -6,7 +6,7 @@
                             <div class="contentItemMapFooter">
                                 <div class="titleMapFooter">Bản đồ</div>
 
-                                <div class="descriptionmapFooter">Khách sạn nằm ở trug tâm thành phố, gần các địa điểm du lịch nổi tiếng</div>
+                                <div class="descriptionmapFooter">Nằm ở trung tâm thành phố, gần các địa điểm du lịch nổi tiếng</div>
 
                                 <a href="#" class="btnType1 btnWatchMap" title="Xem bản đồ"><i class="fas fa-map-marker-alt"></i> Xem bản đồ <i class="fas fa-chevron-right"></i></a>
 
@@ -39,7 +39,7 @@
                         <div class="col-md-8 colItemFooter">
                             <div class="contentItemFooter">
                                 <div class="media mediaAboutFooter">
-                                    <img src="public/assets/images/logo-footer.png" class="imgLogoFooter" alt="Masova Hotel" />
+                                    <img src="public/assets/images/logoqt.png" class="imgLogoFooter" alt="Masova Hotel" />
 
                                     <div class="media-body mediaBodyAboutFooetr">
                                       <div class="wrapTextAboutFooetr">Thư giản, nghỉ ngơi, đưa gia đình và bạn bè cùng nhau tham gia một chuyến phiêu lưu để nhớ về mùa hè này với chương trình khuyến mãi mùa hè tuyệt vời của chúng tôi! Khách sạn nằm ở trug tâm thành phố, gần các địa điểm du lịch nổi tiếng</div>
@@ -52,11 +52,13 @@
                                             <div class="titleMenuFooter">Liên hệ</div>
 
                                             <div class="contentContactFooter">                                                
-                                                <div class="itemContactFooter"><i class="fas fa-map-marker-alt"></i> <a href="#" title="100A8 - 100A9, Trần Phú, Lộc Thọ, Thành phố Nha Trang, Khánh Hòa">07 Mai Xuân Thưởng, Vĩnh Hải, Thành phố Nha Trang, Khánh Hòa</a></div>
+                                                <div class="itemContactFooter"><i class="fas fa-map-marker-alt">
+                                                </i> <a href="#" >07 Mai Xuân Thưởng, Vĩnh Hải, Thành phố Nha Trang, Khánh Hòa</a></div>
 
-                                                <div class="itemContactFooter"><i class="fas fa-phone"></i> <a href="#" title="0258 3905 999">0258 8688 888</a></div>
+                                                <div class="itemContactFooter"><i class="fas fa-phone"></i> <a href="#" >0258 8688 888</a></div>
 
-                                                <div class="itemContactFooter"><i class="fas fa-envelope"></i> <a href="#" title="info@masovanhatranghotel.com">info@homestayqt.com</a></div>
+                                                <div class="itemContactFooter"><i class="fas fa-envelope"></i> 
+                                                <a href="#" >info@homestayqt.com</a></div>
                                             </div>
                                         </div>
 
@@ -66,27 +68,25 @@
                                             <div class="contentContactFooter">
                                                 <div class="row rowMeuLinkFooter">
                                                     <div class="col-md-6 colItemLinkMenuFooter">
-                                                        <a href="index.htm" title="Trang chủ">Trang chủ</a>
+                                                        <a href="./home_index" title="Trang chủ">Trang chủ</a>
                                                     </div>
 
                                                     <div class="col-md-6 colItemLinkMenuFooter">
-                                                        <a href="ds-khuyen-mai.htm" title="Khuyến mãi">Khuyến mãi</a>
+                                                        <a href="./khuyenmai" title="Khuyến mãi">Khuyến mãi</a>
                                                     </div>
 
                                                     <div class="col-md-6 colItemLinkMenuFooter">
-                                                        <a href="ds-phong.htm" title="Phòng">Phòng</a>
+                                                        <a href="./room" title="Phòng">Phòng</a>
+                                                    </div>
+
+                                                    
+
+                                                    <div class="col-md-6 colItemLinkMenuFooter">
+                                                        <a href="./dichvu" title="Dịch vụ">Dịch vụ</a>
                                                     </div>
 
                                                     <div class="col-md-6 colItemLinkMenuFooter">
-                                                        <a href="gioi-thieu.htm" title="Giới thiệu">Giới thiệu</a>
-                                                    </div>
-
-                                                    <div class="col-md-6 colItemLinkMenuFooter">
-                                                        <a href="ds-dich-vu.htm" title="Dịch vụ">Dịch vụ</a>
-                                                    </div>
-
-                                                    <div class="col-md-6 colItemLinkMenuFooter">
-                                                        <a href="lien-he.htm" title="Liên hệ">Liên hệ</a>
+                                                        <a href="./lienhe" title="Liên hệ">Liên hệ</a>
                                                     </div>
                                                 </div>
                                             </div>

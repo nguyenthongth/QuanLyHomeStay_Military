@@ -267,8 +267,63 @@ class adminModel extends connectDB{
             return false;
         }
 
+    }
+
+    // lấy danh sách tất cả các phòng hiện có trong hệ thống
+    function getAllRoom(){
+        $sql  = "SELECT * FROM phong";
+        $result  = $this->connect->query($sql);
+        $info = array();
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {           
+                $info[] = $row;
+            }
+        } else {
+            return false;
+        }
+        
+        return json_encode($info);
 
     }
+
+    // get One room for update 
+        function getOneRooms($ma){
+            $sql = "SELECT * FROM phong WHERE ma_phong ='$ma'";
+            $result = $this->connect->query($sql);
+            $info = array();
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {           
+                    $info[] = $row;
+                }
+            } else {
+                return false;
+            }
+            
+            return json_encode($info);
+
+        }
+    // Update rooom do nguoi  quản trị cập nhật
+        function UpdateRooms($ma_phong,$ten_p, $gia_p, $ma_tt, $ma_ha , $noi_dung){
+            $sql  = "UPDATE phong SET ten_phong='$ten_p',noi_dung='$noi_dung',
+            gia_phong=$gia_p,ma_hinh_anh='$ma_ha',ma_thuoc_tinh='$ma_tt' WHERE ma_phong='$ma_phong'";
+            $result = $this->connect->query($sql);
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+    // hàm xóa phòng
+        function delete_room($ma){
+            $sql  = "DELETE FROM phong WHERE ma_phong='$ma'";
+            $result = $this->connect->query($sql);
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
+        }
     
     ///************************************************* END Phần Dành Cho Room (Phòng)*********** */
 
@@ -304,6 +359,70 @@ class adminModel extends connectDB{
             }
             return json_encode($info);
         }
+
+        // number lien he 
+        function getNumber_lienhe(){
+            $sql  = 'SELECT  COUNT("trang_thai") AS "soluong" FROM lien_he WHERE trang_thai="0"';
+            $result = $this->connect->query($sql);
+            $info = array();
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {           
+                    $info[] = $row;
+                }
+            } else {
+                return false;
+            }
+            
+            return json_encode($info);
+        }
+
+        // get all thong bao lien he 
+
+        function getAllLienHe(){
+            $sql  = "SELECT * From lien_he ORDER BY trang_thai ASC";
+            $result  = $this->connect->query($sql);
+            $info = array();
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {           
+                    $info[] = $row;
+                }
+            } else {
+                return false;
+            }
+            return json_encode($info);
+        }
+
+        // get chi tiết một liên hệ được chọn 
+        function getOne_lienhe($ma){
+            $sql  = "SELECT * from lien_he WHERE id_lien_he='$ma' ";
+            $result = $this->connect->query($sql);
+            $info = array();
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {           
+                    $info[] = $row;
+                }
+            } else {
+                return false;
+            }
+            return json_encode($info);
+        }
+            // thay đồi trạng thái đã xem liên hệ 
+            function updateStatus_lien_he($ma){
+                $sql = "UPDATE lien_he SET trang_thai = 1 WHERE id_lien_he='$ma' ";
+                $result = $this->connect->query($sql);
+
+            }
+        // xóa một liên hệ do administrator chọn
+        function delete_lien_he($ma){
+            $sql  = "DELETE FROM lien_he WHERE id_lien_he='$ma'";
+            $result = $this->connect->query($sql);
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
     ///*************************************************END Phần dành cho header  infomation *********** */
 
 }

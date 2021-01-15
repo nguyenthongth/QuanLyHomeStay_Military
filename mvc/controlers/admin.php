@@ -18,6 +18,8 @@ class admin extends controler{
             $this->view("admin_index",["page"=>"index",
             "booking_room"=>$this->doituong->getBookRoom(),
             "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
             "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "user_info"=>$this->tam]);
         } else{
@@ -40,6 +42,8 @@ class admin extends controler{
                 $this->view("admin_index",["page"=>"index",
                 "booking_room"=>$this->doituong->getBookRoom(),
                 "number_booking"=>$this->doituong->getNumberBookingRoom(),
+                "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+                "alllienhe"=>$this->doituong->getAllLienHe(),
                 "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
                 "user_info"=>$this->tam]);
             
@@ -72,6 +76,7 @@ class admin extends controler{
            $this->view("admin_index",["page"=>"index",
                 "booking_room"=>$this->doituong->getBookRoom(),
                 "number_booking"=>$this->doituong->getNumberBookingRoom(),
+                "number_lienhe"=>$this->doituong->getNumber_lienhe(),
                 "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
                 "user_info"=>$this->tam]);
 
@@ -83,6 +88,7 @@ class admin extends controler{
                 "one_booking_room"=>$this->doituong->getOneBookRoom($ma),
                 "listroom"=>$this->listroom->getListRoom(),
                 "number_booking"=>$this->doituong->getNumberBookingRoom(),
+                "number_lienhe"=>$this->doituong->getNumber_lienhe(),
                 "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
                 "user_info"=>$_SESSION["ten"]]);
         }
@@ -114,18 +120,91 @@ class admin extends controler{
             $ma_hinh_anh = $_POST["ma_ha"];
             $ma_thuoc_tinh = $_POST["ma_tt"];
             $noi_dung = $_POST["noi_dung"];
-            
-
 
         $result =  $this->doituong->add_room_model($ma_phong,$ten_phong,$gia_phong,$ma_hinh_anh,$ma_thuoc_tinh,$noi_dung);
 
         $this->view("admin_index",["page"=>"add_room",
         "result"=>$result,
+        "booking_room"=>$this->doituong->getBookRoom(),
+        "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
+        "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
         "user_info"=>$_SESSION["ten"]]);
        }else{
-        $this->view("admin_index",["page"=>"add_room","user_info"=>$_SESSION["ten"]]);
+        $this->view("admin_index",["page"=>"add_room",
+        "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
+        "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "booking_room"=>$this->doituong->getBookRoom(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]);
        }
     }
+       // hiển thị danh sách các phòng 
+       function allroom(){
+        $this->view("admin_index",["page"=>"view_rooms",
+        "allroom"=>$this->doituong->getAllRoom(),
+        "booking_room"=>$this->doituong->getBookRoom(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]);
+       }
+
+       // cạp nhật thông tin phòng 
+       function updateRooms($ma){
+            if(isset($_POST["btn_update_room"])){
+                $ma_phong = $_POST["ma_phong"];
+                $ten_p = $_POST["ten_phong"];
+                $gia_p = $_POST["gia_phong"];
+                $ma_ha = $_POST["ma_ha"];
+                $ma_tt = $_POST["ma_tt"];
+                $noi_dung = $_POST["noi_dung"];
+
+                $result = $this->doituong->UpdateRooms($ma_phong,$ten_p, $gia_p, $ma_tt, $ma_ha , $noi_dung);
+                $this->view("admin_index",["page"=>"view_rooms",
+                "result_up_r"=>$result,
+                "allroom"=>$this->doituong->getAllRoom(),
+                "number_booking"=>$this->doituong->getNumberBookingRoom(),
+                "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+                "alllienhe"=>$this->doituong->getAllLienHe(),
+                "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+                "user_info"=>$_SESSION["ten"]]);
+
+            }else{
+
+            $this->view("admin_index",["page"=>"update_room",
+            "oneroom_select"=>$this->doituong->getOneRooms($ma),
+            "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
+            "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+            "user_info"=>$_SESSION["ten"]]);
+            }
+       }
+
+       // xóa phòng được chọn 
+       function deleteRoom($ma){
+        $result = $this->doituong->delete_room($ma);
+        $this->view("admin_index",["page"=>"view_rooms",
+        "result_de"=>$result,
+        "allroom"=>$this->doituong->getAllRoom(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]);
+
+       }
+    
 
     //****************************************************************** END  ROOM  */
 
@@ -154,12 +233,20 @@ class admin extends controler{
 
             $this->view("admin_index",["page"=>"add_image",
             "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "user_info"=>$_SESSION["ten"],
             "result"=>$result]);
             }
        }else{
         $this->view("admin_index",["page"=>"add_image",
         "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
         "user_info"=>$_SESSION["ten"]]);
        }
     }
@@ -183,6 +270,11 @@ class admin extends controler{
         "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
         "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
         "result"=>$result,
+        "booking_room"=>$this->doituong->getBookRoom(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
         "user_info"=>$_SESSION["ten"]]);
 
            
@@ -190,6 +282,11 @@ class admin extends controler{
             $this->view("admin_index",["page"=>"add_dichvu",
         "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
         "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "booking_room"=>$this->doituong->getBookRoom(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
         "user_info"=>$_SESSION["ten"]]);
         }  
     }
@@ -213,12 +310,20 @@ class admin extends controler{
             $this->view("admin_index",["page"=>"add_khuyenmai",
         "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
         "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
         "result"=>$result,
         "user_info"=>$_SESSION["ten"]]);
         }else {
             $this->view("admin_index",["page"=>"add_khuyenmai",
         "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
         "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
         "user_info"=>$_SESSION["ten"]]);
         }  
     }
@@ -239,6 +344,10 @@ class admin extends controler{
                 $this->view("admin_index",["page"=>"add_thuoctinh",
             "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
             "result"=>false,
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "test"=>$ma_thuoc_tinh,
             "user_info"=>$_SESSION["ten"]]);
            
@@ -249,6 +358,10 @@ class admin extends controler{
             "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
             "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
             "result"=>$result,
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "user_info"=>$_SESSION["ten"]]);
             }
            
@@ -256,6 +369,10 @@ class admin extends controler{
             $this->view("admin_index",["page"=>"add_thuoctinh",
             "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
             "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "user_info"=>$_SESSION["ten"]]);
         }  
     }
@@ -264,6 +381,11 @@ class admin extends controler{
     function viewThuocTinh(){
             $this->view("admin_index",["page"=>"view_thuoctinh",
             "allthuoctinh"=>$this->doituong->getAllThuocTinh(),
+            "booking_room"=>$this->doituong->getBookRoom(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "user_info"=>$_SESSION["ten"]]);
         
     }
@@ -274,6 +396,10 @@ class admin extends controler{
         $this->view("admin_index",["page"=>"view_thuoctinh",
         "allthuoctinh"=>$this->doituong->getAllThuocTinh(),
         "result"=>$kq,
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
         "user_info"=>$_SESSION["ten"]]);
     }
 
@@ -288,6 +414,10 @@ class admin extends controler{
             $this->view("admin_index",["page"=>"view_thuoctinh",
             "allthuoctinh"=>$this->doituong->getAllThuocTinh(),
             "result_up"=>$result,
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "user_info"=>$_SESSION["ten"]]);
 
         } else {
@@ -295,6 +425,10 @@ class admin extends controler{
             "onethuoctinh"=>$this->doituong->getOneThuocTinh($id),
             "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
             "id_tt"=>$id,
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
             "user_info"=>$_SESSION["ten"]]);
         }
 
@@ -302,5 +436,48 @@ class admin extends controler{
     }
 
     //****************************************************************** END THUỘC TÍNH   */
+
+
+     //************************************************* PHẦN CHO TRANG LIÊN HỆ TIN NHẮN ************/
+
+        // hiển thị tất cả các tin nhắn 
+        function getAll_lien_he($id){
+            if(empty($id) || $id=="all"){
+                $this->view("admin_index",["page"=>"view_lienhe",
+            "booking_room"=>$this->doituong->getBookRoom(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+            "user_info"=>$this->tam]);
+            }else{
+                $this->doituong->updateStatus_lien_he($id);
+                $this->view("admin_index",["page"=>"chitiet_lien_he",
+            "booking_room"=>$this->doituong->getBookRoom(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "one_lienhe"=>$this->doituong->getOne_lienhe($id),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+            "user_info"=>$this->tam]);
+            }
+        }
+
+        // xóa liên hệ tin nhắn từ khách hàng
+
+        function delete_lienhe($id){
+            $this->view("admin_index",["page"=>"view_lienhe",
+            "result_de_lh"=>$this->doituong->delete_lien_he($id),
+            "booking_room"=>$this->doituong->getBookRoom(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "one_lienhe"=>$this->doituong->getOne_lienhe($id),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+           
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+            "user_info"=>$this->tam]);
+        }
+
+      //************************************************ END PHẦN CHO TRANG LIÊN HỆ TIN NHẮN ************/
 }
 ?>

@@ -38,6 +38,8 @@
 	<!-- favicon -->
 	<link rel="shortcut icon" href="public/admin/assets/img/favicon.ico" /> 
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- animation -->
+	<link href="public/admin/assets/css/pages/animate_page.css" rel="stylesheet">
  </head>
  <!-- END HEAD -->
 <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
@@ -93,6 +95,8 @@
     <script src="public/admin/assets/plugins/datatables/jquery.dataTables.min.js" ></script>
  	<script src="public/admin/assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js" ></script>
  	<script src="public/admin/assets/js/pages/table/table_data.js" ></script>
+     <!-- animation -->
+	<script src="public/admin/assets/js/pages/ui/animations.js" ></script>
     <!-- end js include path -->
   </body>
 </html>
