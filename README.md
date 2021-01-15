@@ -5,8 +5,8 @@ Xây dựng website " Quản lý và đặt phòng HomeStay
 với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khách hàng của bạn trải nghiệm và đặt phòng nhanh chóng hơn
 
 - Nhiệm vụ:
-+ Quân : Back-end
-+ Thông : thiết kế giao diện font-end
++ Quân : Xây dựng BackEnd
++ Thông : thiết kế giao diện BackEnd
 + Quân, Thông: xây dựng cơ sở dữ liệu
 
 - Mô tả chức năng<br>
@@ -19,11 +19,11 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	+ Các dịch vụ cung cấp của homeStayQT
 	+ Trang liên hệ.<br>
 	2.Admin
+	+ Trang admin.
 	+ Quản lý phòng.
-	+ Quản lý dịch vụ.
-	<br>
+	+ Quản lý dịch vụ.<br>
 	3.Giao diện
-	- Xây dưng giao diện phù hợp với mục đích, yêu cầu của trang web.
+	- Xây dưng giao diện thân thiện phù hợp với mục đích, yêu cầu của trang web.
 - Công nghệ sử dụng
 	+ PHP MVC
 	+ MySQL
