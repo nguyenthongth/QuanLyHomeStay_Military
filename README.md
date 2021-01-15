@@ -6,7 +6,7 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 
 - Nhiệm vụ:
 + Quân : Xây dựng BackEnd
-+ Thông : thiết kế giao diện BackEnd
++ Thông : thiết kế giao diện FontEnd
 + Quân, Thông: xây dựng cơ sở dữ liệu
 
 - Mô tả chức năng<br>
