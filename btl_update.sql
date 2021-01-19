@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2021 at 04:48 PM
+-- Generation Time: Jan 19, 2021 at 01:23 PM
 -- Server version: 8.0.22
 -- PHP Version: 8.0.0
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administrator` (
   `username` varchar(200) NOT NULL,
-  `pass` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `pass` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `email` varchar(200) NOT NULL,
   `sdt` varchar(12) NOT NULL,
   `ten` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `administrator`
@@ -53,25 +53,24 @@ CREATE TABLE `dat_phong` (
   `ma_dat_phong` varchar(50) NOT NULL,
   `thoi_gian_vao` varchar(10) NOT NULL,
   `thoi_gian_ra` varchar(10) NOT NULL,
-  `ma_phong` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `ma_phong` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `so_luong_phong` varchar(10) NOT NULL,
   `nguoi_lon` varchar(10) NOT NULL,
   `tre_em` varchar(10) DEFAULT NULL,
   `ho_ten` text NOT NULL,
   `email` varchar(200) DEFAULT NULL,
-  `sdt` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `sdt` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `ghichu` text,
   `thoi_gian_dat` varchar(10) NOT NULL,
   `trang_thai` int NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `dat_phong`
 --
 
 INSERT INTO `dat_phong` (`ma_dat_phong`, `thoi_gian_vao`, `thoi_gian_ra`, `ma_phong`, `so_luong_phong`, `nguoi_lon`, `tre_em`, `ho_ten`, `email`, `sdt`, `ghichu`, `thoi_gian_dat`, `trang_thai`) VALUES
-('130121114102', '14/01/2021', '16/01/2021', 'room02', '1', '1', '1', 'anh quan ', 'No Email', '1234546778', 'No ghi chú', '13/01/2021', 1),
-('130121115806', '19/01/2021', '20/01/2021', 'room02', '1', '4', '0', ' Thoong Th ', 'No Email', '1235456456', 'No ghi chú', '13/01/2021', 1);
+('150121081000', '15/01/2021', '16/01/2021', 'room1', '1', '3', '0', 'Anh Quân', 'No Email', '123456789', 'No ghi chú', '15/01/2021', 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +84,15 @@ CREATE TABLE `dich_vu` (
   `noi_dung` text,
   `ma_thuoc_tinh` varchar(50) DEFAULT NULL,
   `ma_hinh_anh` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `dich_vu`
+--
+
+INSERT INTO `dich_vu` (`ma_dich_vu`, `tieu_de`, `noi_dung`, `ma_thuoc_tinh`, `ma_hinh_anh`) VALUES
+('dichvu1', 'Bida', 'Tận hưởng giây phút thư giãn với các dịch vụ của chúng tôi', 'dv1', 'dv1'),
+('dv2', 'Karaoke', 'Thỏa sức ca hát với dịch vụ Karaoke của HomeStay chúng tôi', 'dv2', 'dv2');
 
 -- --------------------------------------------------------
 
@@ -95,19 +102,37 @@ CREATE TABLE `dich_vu` (
 
 CREATE TABLE `hinh_anh` (
   `ma_hinh_anh` varchar(50) NOT NULL,
-  `tieu_de` text CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci,
-  `image_anh` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `tieu_de` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+  `image_anh` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `id_hinh_anh` varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `hinh_anh`
 --
 
 INSERT INTO `hinh_anh` (`ma_hinh_anh`, `tieu_de`, `image_anh`, `id_hinh_anh`) VALUES
-('hinh1', 'anh1', 'bida02.jpg', '1610056927'),
-('khuyenmai3', 'No_titel', 'Big-Room5.jpg', '1610467400'),
-('khuyenmai3', 'No_titel', 'Big-Room5.jpg', '1610474057');
+('banner', 'No_titel', 'banner1.jpg', '1610648303'),
+('banner', 'No_titel', 'banner2.jpg', '1610648317'),
+('banner', 'No_titel', 'banner3.jpg', '1610648326'),
+('banner', 'No_titel', 'banner4.jpg', '1610648336'),
+('banner', 'No_titel', 'banner5.jpg', '1610648345'),
+('banner', 'No_titel', 'banner6.jpg', '1610648360'),
+('banner', 'No_titel', 'banner7.jpg', '1610648370'),
+('phong1', 'No_titel', '57262850_2851679101516457_3755024593325129728_o.jpg', '1610657035'),
+('phong1', 'No_titel', '69218146_3203398616344502_3609200025445335040_o.jpg', '1610657051'),
+('phong1', 'No_titel', '44344443_2469446563073048_6756504231198326784_o.jpg', '1610657076'),
+('phong2', 'No_titel', '69991210_3203398406344523_5713389441028980736_o.jpg', '1610657094'),
+('phong2', 'No_titel', '34093493_2204171969600510_8926761513788637184_n (1).jpg', '1610657102'),
+('phong2', 'No_titel', 'banner2.jpg', '1610657117'),
+('km1', 'No_titel', '1.jpg', '1610658004'),
+('dv1', 'No_titel', 'bida01.jpg', '1610658372'),
+('km2', 'No_titel', 'km2.jpg', '1610662145'),
+('dv2', 'No_titel', 'karaok2.jpg', '1610663348'),
+('dv2', 'No_titel', 'ka02.jpg', '1610663391'),
+('phong3', 'No_titel', 'banner5.jpg', '1610663719'),
+('phong3', 'No_titel', '3-2-696x696.png', '1610663731'),
+('phong3', 'No_titel', '25158003_1776078816020962_852727154806233275_n.jpg', '1610663740');
 
 -- --------------------------------------------------------
 
@@ -116,21 +141,22 @@ INSERT INTO `hinh_anh` (`ma_hinh_anh`, `tieu_de`, `image_anh`, `id_hinh_anh`) VA
 --
 
 CREATE TABLE `khuyen_mai` (
+  `id_khuyen_mai` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `ma_km` varchar(50) NOT NULL,
   `tieu_de` text NOT NULL,
   `noi_dung` text,
   `ma_thuoc_tinh` varchar(50) DEFAULT NULL,
   `ma_hinh_anh` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `khuyen_mai`
 --
 
-INSERT INTO `khuyen_mai` (`ma_km`, `tieu_de`, `noi_dung`, `ma_thuoc_tinh`, `ma_hinh_anh`) VALUES
-('khuyenmai1', 'Giảm giá 50%', 'Giảm trực tiếp 50% cho ngày hè nóng bỏng', 'dịchvu01', 'hinh1'),
-('khuyenmai2', 'Đi 3 tặng 1 ', 'giá cực sốc', 'dịchvu01', 'hinh1'),
-('khuyenmai3', 'Trải nghiệm khó quên ', 'Đừng bỏ lỡ cơ hội cuối này!', 'khuyenmai3', 'khuyenmai3');
+INSERT INTO `khuyen_mai` (`id_khuyen_mai`, `ma_km`, `tieu_de`, `noi_dung`, `ma_thuoc_tinh`, `ma_hinh_anh`) VALUES
+('1212456365', 'khuyenmai1', 'Sale Đậm Cuối Năm', 'Giảm giá sau cho cuối năm', 'km1', 'km1'),
+('1234567895', 'khuyenmai2', 'Giảm trực tiếp 20% khi đi 3 người', 'Giảm trực tiếp 20% tổng giá dịch vụ khi đi từ 3 người trở lên. Chi tiết liên hệ để biết thêm thông tin', 'km2', 'km2'),
+('180121174509', 'km3', 'Mua ngay hôm nay chờ chi nữa', 'Mua đi chờ chi ', 'km2', 'km1');
 
 -- --------------------------------------------------------
 
@@ -139,21 +165,14 @@ INSERT INTO `khuyen_mai` (`ma_km`, `tieu_de`, `noi_dung`, `ma_thuoc_tinh`, `ma_h
 --
 
 CREATE TABLE `lien_he` (
-  `ho_ten` text CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `email` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `ho_ten` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `sdt` varchar(12) DEFAULT NULL,
   `noi_dung` text,
   `id_lien_he` varchar(50) NOT NULL,
   `ngay` varchar(10) NOT NULL,
   `trang_thai` int NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
-
---
--- Dumping data for table `lien_he`
---
-
-INSERT INTO `lien_he` (`ho_ten`, `email`, `sdt`, `noi_dung`, `id_lien_he`, `ngay`, `trang_thai`) VALUES
-('Nguyễn Văn Quân', 'anhquan.lien123@gmail.com', '123456789', 'hello mọi người', '193545', '14/01/2021', 1);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -162,21 +181,23 @@ INSERT INTO `lien_he` (`ho_ten`, `email`, `sdt`, `noi_dung`, `id_lien_he`, `ngay
 --
 
 CREATE TABLE `phong` (
+  `id_phong` varchar(12) NOT NULL,
   `ma_phong` varchar(50) NOT NULL,
   `ten_phong` text NOT NULL,
   `noi_dung` text NOT NULL,
   `gia_phong` int NOT NULL,
   `ma_hinh_anh` varchar(50) DEFAULT NULL,
   `ma_thuoc_tinh` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `phong`
 --
 
-INSERT INTO `phong` (`ma_phong`, `ten_phong`, `noi_dung`, `gia_phong`, `ma_hinh_anh`, `ma_thuoc_tinh`) VALUES
-('room01', 'Phòng loại 1', 'Loại phòng hạng sang và cao cấp nhất của chỗ chúng tôi. Phòng được thiết kế sang trọng lịch sự hiện đại và đầy đủ tiện nghi', 499000, NULL, NULL),
-('room02', 'Phòng loại 2', ' Chất lượng đi đôi với giá tiền dịch vụ tiện ích hoàn hảo', 399000, NULL, NULL);
+INSERT INTO `phong` (`id_phong`, `ma_phong`, `ten_phong`, `noi_dung`, `gia_phong`, `ma_hinh_anh`, `ma_thuoc_tinh`) VALUES
+('124578986532', 'room1', 'Phòng Loại 1', ' Phòng cao cấp nhất của homeStay chúng tôi . Welcome ', 799000, 'phong1', 'phong1'),
+('124978653245', 'room3', 'Phòng Loại3', 'Giá thành phù hợp chất lượng tương đối. Đây là phòng có diện tích phù hợp cho các bạn trẻ đam mê xê dịch', 499000, 'phong3', 'phong3'),
+('134679852564', 'room2', 'Phòng loại 2', 'Phòng rộng rãi thoàng mat phù hợp cho gia đình 3 người lưu trú', 619000, 'phong2', 'phong2');
 
 -- --------------------------------------------------------
 
@@ -186,19 +207,23 @@ INSERT INTO `phong` (`ma_phong`, `ten_phong`, `noi_dung`, `gia_phong`, `ma_hinh_
 
 CREATE TABLE `thuoc_tinh` (
   `ma_thuoc_tinh` varchar(50) NOT NULL,
-  `ten_thuoc_tinh` text CHARACTER SET utf8mb4 COLLATE utf8mb4_vietnamese_ci,
+  `ten_thuoc_tinh` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `noi_dung` text NOT NULL,
   `id_thuoc_tinh` varchar(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `thuoc_tinh`
 --
 
 INSERT INTO `thuoc_tinh` (`ma_thuoc_tinh`, `ten_thuoc_tinh`, `noi_dung`, `id_thuoc_tinh`) VALUES
-('dịchvu01', 'Địa điểm Sảnh', 'Sảnh tầng 2 ạnh quân tr123\r\n', '1609868725'),
-('khuyenmai3', '', 'vui chơi giải trí thỏa thích ', '1610466695'),
-('khuyenmai3', '', 'Không giới hạn độ tuổi', '1610466712');
+('phong1', 'Diện tích', '25 m2', '1610657214'),
+('km1', 'Ưu đãi khủng', 'Giảm giá cực sốc cho ngày tết', '1610658112'),
+('dv1', 'Địa điểm', 'Sảnh tầng 1 khu phức hợp thể thao QT', '1610658330'),
+('km2', 'Thời Gian:', 'Áp dụng đến khi hết chương trình khuyến mãi', '1610662184'),
+('phong2', 'Diện tích ', '25m2', '1610662358'),
+('dv2', 'Địa điểm', 'Sảnh tầng 2 khu phức hợp thể thao QT', '1610663428'),
+('phong3', 'Diện tích', '20m2', '1610663764');
 
 --
 -- Indexes for dumped tables
@@ -238,8 +263,7 @@ ALTER TABLE `hinh_anh`
 -- Indexes for table `khuyen_mai`
 --
 ALTER TABLE `khuyen_mai`
-  ADD PRIMARY KEY (`ma_km`),
-  ADD KEY `ma_km` (`ma_km`),
+  ADD PRIMARY KEY (`id_khuyen_mai`,`ma_km`),
   ADD KEY `ma_thuoc_tinh` (`ma_thuoc_tinh`,`ma_hinh_anh`),
   ADD KEY `kf_km_ha` (`ma_hinh_anh`);
 
@@ -253,7 +277,7 @@ ALTER TABLE `lien_he`
 -- Indexes for table `phong`
 --
 ALTER TABLE `phong`
-  ADD PRIMARY KEY (`ma_phong`),
+  ADD PRIMARY KEY (`id_phong`,`ma_phong`),
   ADD KEY `ma_phong` (`ma_phong`,`ma_hinh_anh`,`ma_thuoc_tinh`),
   ADD KEY `kf_p_tt` (`ma_thuoc_tinh`),
   ADD KEY `kf_p_ha` (`ma_hinh_anh`);
