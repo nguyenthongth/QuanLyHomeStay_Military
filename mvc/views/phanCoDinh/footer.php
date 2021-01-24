@@ -98,7 +98,7 @@
                                 <div class="wrapCopyRightAndDesigned">
                                     <div class="clearfix contentCopyRightAndDesigned">
                                         <div class="wrapTextCopyRightAndDesigned">
-                                            <span class="textCopyRightFooter">© 2020 HomeStay QT</span> <span class="texDesignedFooter">Thiết kết và phát triển bởi <a href="https://www.facebook.com/anhquanTR123" target="_blank" title="Nguyễn Văn Quân">Quân</a><a href="https://www.facebook.com/nguyenthong.veriacc.axz/" target="_blank" title="Nguyễn Minh Thông">Thông</a></span>
+                                            <span class="textCopyRightFooter">© 2020 HomeStay QT</span> <span class="texDesignedFooter">Kế Thừa và phát triển bởi <a href="https://www.facebook.com/anhquanTR123" target="_blank" title="Nguyễn Văn Quân">Quân</a><a href="https://www.facebook.com/nguyenthong.veriacc.axz/" target="_blank" title="Nguyễn Minh Thông">Thông</a></span>
                                         </div>
                     
                                         <div class="listFanpageFooter">

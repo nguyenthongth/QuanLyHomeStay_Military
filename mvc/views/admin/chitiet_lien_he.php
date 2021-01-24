@@ -24,22 +24,7 @@
 			                          
 			                            <div class="col-md-12">
 			                                <div class="inbox-body">
-			                                    <!-- <div class="inbox-header">
-			                                        <h1 class="pull-left">Inbox</h1> 
-			                                        <div class="mail-option">
-			                                            <div class="btn-group">
-			                                                <a class="btn" href="#"> Reply </a> 
-			                                                <a class="btn" href="#"> Reply all </a> 
-			                                            </div>
-			                                            <div class="btn-group">
-			                                                <a class="btn" href="#"> Forward </a> 
-			                                                <a class="btn" href="#"> Delete </a>
-			                                            </div>
-			                                            <div class="btn-group">
-			                                                <a class="btn" href="#"> Mark as read </a> 
-			                                            </div>
-			                                        </div>
-			                                    </div> -->
+			                                
 
 											<!-- BEGIN START --> 
 											<?php $chitiet  = json_decode($data["one_lienhe"], true); 
@@ -80,15 +65,7 @@
 			                                            <div class="compose-btn pull-left">
 			                                                <a href="./admin/getAll_lien_he/all" class="btn btn-sm btn-primary"><i
 																class="fa fa-reply"></i> quay lại</a>
-			                                               <!--  <button class="btn btn-sm btn-default">
-			                                                    <i class="fa fa-arrow-right"></i> Forward
-			                                                </button>
-			                                                <button class="btn  btn-sm btn-default tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title="">
-			                                                    <i class="fa fa-print"></i>
-			                                                </button>
-			                                                <button class="btn btn-sm btn-default tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title="">
-			                                                    <i class="fa fa-trash-o"></i>
-			                                                </button> -->
+			                                             
 			                                            </div>
 			                                        </section>
 			                                    </div>

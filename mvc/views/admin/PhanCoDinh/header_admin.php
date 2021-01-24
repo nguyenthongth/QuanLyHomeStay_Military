@@ -8,9 +8,11 @@
                     <span class="logo-default" >HomeStay QT</span> </a>
                 </div>
                 <!-- logo end -->
+                
 				<ul class="nav navbar-nav navbar-left in">
 					<li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
 				</ul>
+                <!-- 
                  <form class="search-form-opened" action="#" method="GET">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search..." name="query">
@@ -20,7 +22,7 @@
                            </a>
                         </span>
                     </div>
-                </form>
+                </form> -->
                 
                 <!-- start mobile menu -->
                 <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">

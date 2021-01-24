@@ -23,7 +23,7 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	+ Quản lý phòng.
 	+ Quản lý dịch vụ.<br>
 	3.Giao diện
-	- Xây dưng giao diện thân thiện phù hợp với mục đích, yêu cầu của trang web.
+	- Xây dưng giao diện phù hợp với mục đích, yêu cầu của trang web.
 - Công nghệ sử dụng
 	+ PHP MVC
 	+ MySQL

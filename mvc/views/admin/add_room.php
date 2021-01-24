@@ -20,7 +20,7 @@
                      <div class="row">
 						<div class="col-sm-12">
 							<div class="card-box">
-								<div class="card-head">
+								<div class="card-head" style="background-color: #008000;border-radius: 5px; padding: 2px;">
 									<header>Add room</header>
 									  <!--<button id = "panel-button" 
 			                           class = "mdl-button mdl-js-button mdl-button--icon pull-right" 
@@ -40,25 +40,30 @@
 								<div class="card-body row">
 						            <div class="col-lg-6 p-t-20"> 
 						              <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-					                     <input class = "mdl-textfield__input" type = "text" id = "txtRoomNo" name="ma_phong">
-					                     <label class = "mdl-textfield__label">Mã Phòng của Bạn</label>
+					                     <input class = "mdl-textfield__input" type = "text" id = "txtRoomNo" name="ma_phong"
+										 style="border: 1px solid #A9A9A9 ;border-radius: 5px; padding: 2px;">
+					                     <label class = "mdl-textfield__label" style="padding-left: 5px;">Mã Phòng của Bạn</label>
 					                  </div>
 						            </div>
 						            <div class="col-lg-6 p-t-20"> 
                                     <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-					                     <input class = "mdl-textfield__input" type = "text" id = "txtRoomNo" name="ten_phong">
+					                     <input class = "mdl-textfield__input" type = "text" id = "txtRoomNo" name="ten_phong"
+										 style="border: 1px solid #A9A9A9 ;border-radius: 5px; padding: 2px;">
 					                     <label class = "mdl-textfield__label">Tên Phòng</label>
 					                  </div>
 						           	</div>
 						           	<div class="col-lg-6 p-t-20"> 
                                        <div class = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-					                     <input class = "mdl-textfield__input" type = "number" id = "txtRoomNo" name="gia_phong">
+					                     <input class = "mdl-textfield__input" type = "number" id = "txtRoomNo" name="gia_phong"
+										 style="border: 1px solid #A9A9A9 ;border-radius: 5px; padding: 2px;">
 					                     <label class = "mdl-textfield__label">Giá Phòng</label>
 					                  </div>
 						            </div>
 									<div class="col-lg-6 p-t-20"> 
 							              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
-									            <input class="mdl-textfield__input" type="text" id="sample3" value="" readonly tabIndex="-1" name="ma_ha">
+									            <input class="mdl-textfield__input" type="text" id="sample3" 
+												style="border: 1px solid #A9A9A9 ;border-radius: 5px; padding: 2px;"
+												value="" readonly tabIndex="-1" name="ma_ha">
 									            <label for="sample2" class="pull-right margin-0">
 									                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
 									            </label>
@@ -74,7 +79,8 @@
 							            </div>
 										<div class="col-lg-6 p-t-20"> 
 							              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
-									            <input class="mdl-textfield__input" type="text" id="sample2" value="" readonly tabIndex="-1" name="ma_tt">
+									            <input class="mdl-textfield__input" style="border: 1px solid #A9A9A9 ;border-radius: 5px; padding: 2px;"
+												type="text" id="sample2" value="" readonly tabIndex="-1" name="ma_tt">
 									            <label for="sample2" class="pull-right margin-0">
 									                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
 									            </label>
@@ -91,15 +97,16 @@
                                        <div class="col-lg-12 p-t-20"> 
 						              <div class = "mdl-textfield mdl-js-textfield txt-full-width">
 					                     <textarea class = "mdl-textfield__input" rows =  "4"  name="noi_dung"
+										 style="border: 1px solid #A9A9A9 ;border-radius: 5px; padding: 2px;"
 					                        id = "education" ></textarea>
 					                     <label class = "mdl-textfield__label" for = "text7">Nhập nội dung mô tả cho phòng của bạn</label>
 					                  </div>
 							         </div>
 							         <div class="col-lg-12 p-t-20 text-center"> 
-						              	<button type="submit" name="add_new_room"
+						              	<button type="submit" name="add_new_room" style="border-radius: 20px;"
 										  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-pink">
 										  Thêm Phòng Này</button>
-										<button type="button" onclick="xem_ds()" 
+										<button type="button" onclick="xem_ds()" style="border-radius:20px;"
 										class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-default">
 										Xem Danh Sách</button>
 						            </div>

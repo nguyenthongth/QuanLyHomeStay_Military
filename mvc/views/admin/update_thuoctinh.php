@@ -2,35 +2,14 @@
             <div class="page-content-wrapper">
                 <div class="page-content">
                     <div class="page-bar">
-                        <div class="page-title-breadcrumb">
-                            <div class=" pull-left">
-                                <div class="page-title">Update Thuộc Tính</div>
-                            </div>
-                            <ol class="breadcrumb page-breadcrumb pull-right">
-                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
-                                </li>
-                                <li><a class="parent-item" href="">Thuộc Tính</a>&nbsp;<i class="fa fa-angle-right"></i>
-                                </li>
-                                <li class="active">Update</li>
-                            </ol>
-                        </div>
+                       
                     </div>
                      <div class="row">
 						<div class="col-sm-12">
 							<div class="card-box">
 								<div class="card-head">
 									<header>Update Properties</header>
-									  <!--<button id = "panel-button" 
-			                           class = "mdl-button mdl-js-button mdl-button--icon pull-right" 
-			                           data-upgraded = ",MaterialButton">
-			                            <i class = "material-icons">more_vert</i>
-			                        </button>
-			                        <ul class = "mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-			                           data-mdl-for = "panel-button">
-			                           <li class = "mdl-menu__item"><i class="material-icons">assistant_photo</i>Action</li>
-			                           <li class = "mdl-menu__item"><i class="material-icons">print</i>Another action</li>
-			                        <li class = "mdl-menu__item"><i class="material-icons">favorite</i>Something else here</li> -->
-			                        </ul>
+									 </ul>
                                 </div>
                                 <form action="./admin/updatethuoctinh/<?php echo $data["id_tt"]?>" method="POST" > 
 								<div class="card-body row">
@@ -69,11 +48,11 @@
 								         </div>
 										 <?php } ?>
 							         <div class="col-lg-12 p-t-20 text-center"> 
-                                          <button type="submit"  name="update_tt"
+                                          <button type="submit"  name="update_tt"  style="border-radius: 20px;"
                                           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-pink">
-                                              Update</button>
-										<button type="button"  onclick="huybo()"
-										class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-default">Cancel</button>
+                                              Cập Nhật</button>
+										<button type="button"  onclick="huybo()"  style="border-radius: 20px;"
+										class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-default">Xem Danh Sách</button>
 						            </div>
                                 </div>
                                 </form>

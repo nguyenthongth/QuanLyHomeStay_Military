@@ -116,6 +116,33 @@ class adminModel extends connectDB{
         return $ma_hinh_anh;
     }
 
+    // lấy danh sách hình ảnh hiện có trong sql 
+    function getAllImage(){
+        $sql = "SELECT * FROM hinh_anh ";
+        $result = $this->connect->query($sql);
+        $hinh_anh = array();
+        if ($result->num_rows > 0) {
+            // show dữ liệu trên trang
+            while($row = $result->fetch_assoc()) {           
+                $hinh_anh[] = $row;
+            }
+        } else {
+            return false;
+        }
+        
+        return json_encode($hinh_anh);
+    }
+
+    // hàm xóa hình ảnh
+    function delete_image($id){
+        $sql = "DELETE FROM hinh_anh WHERE id_hinh_anh='$id'";
+        $result = $this->connect->query($sql);
+        if($result){
+            return true;
+        }else{
+            return false;
+        }
+    }
      // ******************** END Phần dành cho hình ảnh ***************************************
 
     
@@ -124,9 +151,37 @@ class adminModel extends connectDB{
     
      // ******************** Phần dành cho dịch vụ ***************************************
     // ham them dich vu moi
-    function addService($ma_dich_vu,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh){
-        $sql = "INSERT INTO dich_vu(ma_dich_vu, tieu_de, noi_dung, ma_thuoc_tinh, ma_hinh_anh)
-         VALUES ('$ma_dich_vu','$tieu_de','$noidung','$ma_thuoc_tinh','$ma_hinh_anh')";
+    function addService($iddichvu,$ma_dich_vu,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh){
+        $sql = "INSERT INTO dich_vu(id_dich_vu,ma_dich_vu, tieu_de, noi_dung, ma_thuoc_tinh, ma_hinh_anh)
+         VALUES ('$iddichvu','$ma_dich_vu','$tieu_de','$noidung','$ma_thuoc_tinh','$ma_hinh_anh')";
+         $result = $this->connect->query($sql);
+
+         if($result){
+             return true;
+         } else{
+             return false;
+         }
+    }
+    // hàm get lisst service all 
+    function getAllDichVu(){
+        $sql = "SELECT * FROM dich_vu";
+        $result  = $this->connect->query($sql);
+        $info = array();
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {           
+                $info[] = $row;
+            }
+        } else {
+            return false;
+        }
+        
+        return json_encode($info);
+
+    }
+
+    // delete dich vu 
+    function delete_dichvu($id){
+        $sql = "DELETE FROM dich_vu WHERE id_dich_vu='$id'";
          $result = $this->connect->query($sql);
 
          if($result){
@@ -136,15 +191,30 @@ class adminModel extends connectDB{
          }
     }
 
+    // hàm chi tiết dịch vụ 
+    function getOneDichVu($id){
+        $sql = "SELECT * FROM dich_vu WHERE id_dich_vu='$id'";
+        $result  = $this->connect->query($sql);
+        $info = array();
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {           
+                $info[] = $row;
+            }
+        } else {
+            return false;
+        }
+        
+        return json_encode($info);
+    }
     // ********************END  Phần dành cho dịch vụ ***************************************
 
 
 
  // ******************** Phần dành cho khuyến mãi***************************************
     // hàm thêm khuyến mãi 
-    function addKhuyenMai($ma_khuyen_mai,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh){
-        $sql = "INSERT INTO khuyen_mai(ma_km, tieu_de, noi_dung, ma_thuoc_tinh, ma_hinh_anh)
-         VALUES ('$ma_khuyen_mai','$tieu_de','$noidung','$ma_thuoc_tinh','$ma_hinh_anh')";
+    function addKhuyenMai($id_km,$ma_khuyen_mai,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh){
+        $sql = "INSERT INTO khuyen_mai(id_khuyen_mai,ma_km, tieu_de, noi_dung, ma_thuoc_tinh, ma_hinh_anh)
+         VALUES ('$id_km','$ma_khuyen_mai','$tieu_de','$noidung','$ma_thuoc_tinh','$ma_hinh_anh')";
          $result = $this->connect->query($sql);
 
          if($result){
@@ -154,8 +224,65 @@ class adminModel extends connectDB{
          }
     }
 
+    // Hàm lấy thông tin tất cả các khuyến mãi trả danh sách hiển thị 
+    function getAll_km(){
+        $sql  = "SELECT * from khuyen_mai";
+        $result  = $this->connect->query($sql);
+        $info = array();
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {           
+                $info[] = $row;
+            }
+        } else {
+            return false;
+        }
+        
+        return json_encode($info);
 
-         // ******************** END  Phần dành cho khuyến mãi ***************************************
+    }
+
+    // hàm  xóa một khuyến mại 
+    function delete_km($id){
+        $sql = "DELETE FROM khuyen_mai WHERE id_khuyen_mai='$id'";
+        $result = $this->connect->query($sql);
+
+         if($result){
+             return true;
+         } else{
+             return false;
+         }
+    }
+
+    // lấy thông tin một khuyến mãi bất kì
+        function getOneKm($id){
+            $sql  = "SELECT * from khuyen_mai WHERE id_khuyen_mai='$id'";
+        $result  = $this->connect->query($sql);
+        $info = array();
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {           
+                $info[] = $row;
+            }
+        } else {
+            return false;
+        }
+        
+        return json_encode($info);
+        }
+        // cập nhật khuyến mãi 
+
+        function update_khuyenmai($id_km , $ma_km , $tieu_de , $ma_tt , $ma_ha, $noi_dung){
+            $sql = "UPDATE khuyen_mai SET ma_km='$ma_km',
+            tieu_de='$tieu_de',noi_dung='$noi_dung',ma_thuoc_tinh='$ma_tt',ma_hinh_anh='$ma_ha' WHERE id_khuyen_mai='$id_km'";
+            $result = $this->connect->query($sql);
+            if($result){
+                return true;
+            }else{
+                return false;
+            }
+
+        }
+
+ // ******************** END  Phần dành cho khuyến mãi ***************************************
 
     ///********************************************** Phần dành cho thuộc tính *********************** */
     // hàm thêm thuộc tính
@@ -256,9 +383,9 @@ class adminModel extends connectDB{
 
 
     ///************************************************* Phần Dành Cho Room (Phòng)*********** */
-    function add_room_model($ma_phong,$ten_phong,$gia_phong,$ma_hinh_anh,$ma_thuoc_tinh,$noi_dung){
-        $sql = "INSERT INTO phong(ma_phong, ten_phong, noi_dung, gia_phong, ma_hinh_anh, ma_thuoc_tinh) 
-        VALUES ('$ma_phong', '$ten_phong', '$noi_dung', '$gia_phong', '$ma_hinh_anh','$ma_thuoc_tinh')";
+    function add_room_model($id_phong,$ma_phong,$ten_phong,$gia_phong,$ma_hinh_anh,$ma_thuoc_tinh,$noi_dung){
+        $sql = "INSERT INTO phong(id_phong,ma_phong, ten_phong, noi_dung, gia_phong, ma_hinh_anh, ma_thuoc_tinh) 
+        VALUES ('$id_phong','$ma_phong', '$ten_phong', '$noi_dung', '$gia_phong', '$ma_hinh_anh','$ma_thuoc_tinh')";
 
         $result = $this->connect->query($sql);
         if($result){
@@ -316,7 +443,7 @@ class adminModel extends connectDB{
 
     // hàm xóa phòng
         function delete_room($ma){
-            $sql  = "DELETE FROM phong WHERE ma_phong='$ma'";
+            $sql  = "DELETE FROM phong WHERE id_phong='$ma'";
             $result = $this->connect->query($sql);
             if($result){
                 return true;
@@ -414,6 +541,7 @@ class adminModel extends connectDB{
             }
         // xóa một liên hệ do administrator chọn
         function delete_lien_he($ma){
+            
             $sql  = "DELETE FROM lien_he WHERE id_lien_he='$ma'";
             $result = $this->connect->query($sql);
             if($result){

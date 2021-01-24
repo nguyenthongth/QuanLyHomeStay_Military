@@ -7,7 +7,7 @@
                         <div class="col-md-12">
                             <div class="card card-box">
                                 <div class="card-head"  style="background-color: #ADD8E6;border-radius: 5px; padding: 2px;">
-                                    <header>Danh Sách Các Phòng</header>
+                                    <header>Danh Sách Dịch Vụ</header>
                                     <div class="tools">
                                         <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
 	                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
@@ -16,10 +16,11 @@
                                 </div>
                                 <div class="card-body ">
                                     <div class="row p-b-20">
-                                        <div class="col-md-6 col-sm-6 col-6">
+                                    <div class="col-md-6 col-sm-6 col-6">
                                             <div class="btn-group">
-                                                <a href="./admin/add_room" id="addRow" class="btn btn-info">
-                                                    Phòng mới<i class="fa fa-plus"></i>
+                                                <a href="./admin/add_dichvu" style="border-radius: 20px;"
+                                                 id="addRow" class="btn btn-info">
+                                                    New Service <i class="fa fa-plus"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -30,10 +31,10 @@
                                         <thead>
                                             <tr>
                                             	<th class="center"> STT </th>
-                                                <th class="center"> Mã phòng</th>
-                                                <th class="center"> Tên Phòng </th>
+                                                <th class="center"> Mã dịch vụ</th>
+                                                <th class="center"> Tên dịch vụ</th>
                                                 <th class="center"> Mô Tả</th>
-                                                <th class="center"> Giá Phòng </th>
+                                               
                                                 <th class="center"> Mã thuộc Tính </th>
                                                 <th class="center"> Mã Hình Ảnh </th>                                    
                                                 <th class="center"> Action </th>
@@ -41,26 +42,26 @@
                                         </thead>
                                         <tbody>
                                         <!-- danh dách phòng --> 
-                                        <?php  if(isset($data["allroom"])){
-                                            $list_room  = json_decode($data["allroom"],true);
+                                        <?php  if(isset($data["alldichvu"])){
+                                            $alldichvu  = json_decode($data["alldichvu"],true);
                                             $number = 1;
-                                            if(!empty($list_room)){
-                                                foreach($list_room  as $row_r){
+                                            if(!empty($alldichvu)){
+                                                foreach($alldichvu  as $row_r){
                                                    
                                                     echo '<tr class="odd gradeX">
                                                     <td class="center">'.$number.'</td>
-                                                    <td class="center">'.$row_r["ma_phong"].'</td>
-                                                    <td class="center">'.$row_r["ten_phong"].'</td>
+                                                    <td class="center">'.$row_r["ma_dich_vu"].'</td>
+                                                    <td class="center">'.$row_r["tieu_de"].'</td>
                                                     <td class="center">'.$row_r["noi_dung"].'</td>
-                                                    <td class="center">'.$row_r["gia_phong"].'</td>
+                                               
                                                     <td class="center">'.$row_r["ma_thuoc_tinh"].'</td>
                                                     <td class="center">'.$row_r["ma_hinh_anh"].'</td>
                                                     
                                                     <td class="center">
-                                                        <a href="./admin/updateRooms/'.$row_r["ma_phong"].'" class="btn btn-tbl-edit btn-xs">
+                                                        <a href="./admin/updatedichvu/'.$row_r["id_dich_vu"].'" class="btn btn-tbl-edit btn-xs">
                                                             <i class="fa fa-pencil"></i>
                                                         </a>
-                                                        <button class="btn btn-tbl-delete btn-xs" onclick="deleteRoom('.$row_r["id_phong"].')">
+                                                        <button class="btn btn-tbl-delete btn-xs" onclick="deleteRoom('.$row_r["id_dich_vu"].')">
                                                             <i class="fa fa-trash-o "></i>
                                                         </bttton>
                                                     </td>
@@ -91,17 +92,24 @@
                 swal("Lỗi......","Đã có lỗi xảy ra khi cập nhật phòng của bạn" , "warning");
             }
 
+            function thanhcong_de(){
+                swal("Thành Công","Dịch Vụ của bạn đã được xóa" , "success");
+            }
+            function  thatbai_de(){
+                swal("Lỗi......","Đã có lỗi xảy ra khi xóa dịch vụ này . Vui lòng thử lại" , "warning");
+            }
+
             function deleteRoom(ma){
                 swal({
-                    title: "Delete Room?",
-                    text: "Bạn chắc chắn muốn xóa phòng này!",
+                    title: "Delete Service?",
+                    text: "Bạn muốn xóa dịch vụ này !",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
                     })
                     .then((willDelete) => {
                     if (willDelete) {
-                        window.location ="./admin/deleteRoom/"+ma;
+                        window.location ="./admin/deletedicvu/"+ma;
                     } else {
                         swal("Quyết định của bạn thật tuyệt vời");
                     }
@@ -110,13 +118,14 @@
         
         </script>
             <?php 
-                if(isset($data["result_up_r"])){
-                    if($data["result_up_r"]){
-                        echo '<script type="text/javascript"> thanhcong_up(); </script>';
+                if(isset($data["result_de_dv"])){
+                    if($data["result_de_dv"]){
+                        echo '<script type="text/javascript"> thanhcong_de(); </script>';
                     }else{
-                        echo '<script type="text/javascript"> thatbai_up(); </script>';
+                        echo '<script type="text/javascript"> thatbai_de(); </script>';
                     }
                 }
 
 
             ?>
+             

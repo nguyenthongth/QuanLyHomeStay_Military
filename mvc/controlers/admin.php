@@ -120,8 +120,10 @@ class admin extends controler{
             $ma_hinh_anh = $_POST["ma_ha"];
             $ma_thuoc_tinh = $_POST["ma_tt"];
             $noi_dung = $_POST["noi_dung"];
+            date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $id_phong = date("dmy").date('His');
 
-        $result =  $this->doituong->add_room_model($ma_phong,$ten_phong,$gia_phong,$ma_hinh_anh,$ma_thuoc_tinh,$noi_dung);
+        $result =  $this->doituong->add_room_model($id_phong,$ma_phong,$ten_phong,$gia_phong,$ma_hinh_anh,$ma_thuoc_tinh,$noi_dung);
 
         $this->view("admin_index",["page"=>"add_room",
         "result"=>$result,
@@ -166,6 +168,7 @@ class admin extends controler{
                 $ma_ha = $_POST["ma_ha"];
                 $ma_tt = $_POST["ma_tt"];
                 $noi_dung = $_POST["noi_dung"];
+               
 
                 $result = $this->doituong->UpdateRooms($ma_phong,$ten_p, $gia_p, $ma_tt, $ma_ha , $noi_dung);
                 $this->view("admin_index",["page"=>"view_rooms",
@@ -251,6 +254,30 @@ class admin extends controler{
        }
     }
 
+
+    // lấy danh sách hình ảnh hiện có trong csdl 
+    function allimage(){
+        $this->view("admin_index",["page"=>"view_image",
+        "allImage"=>$this->doituong->getAllImage(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]);
+    }
+    
+    // hàm xóa hình ảnh 
+    function deleteimage($id_hinh_anh){
+        $this->view("admin_index",["page"=>"view_image",
+        "allImage"=>$this->doituong->getAllImage(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+
+        "result_de_im"=>$this->doituong->delete_image($id_hinh_anh),
+        "user_info"=>$_SESSION["ten"]]);
+    }
     //******************************************************************END  IMAGE  */
 
 
@@ -263,8 +290,11 @@ class admin extends controler{
             $noidung = $_POST["noidung"];
             $ma_thuoc_tinh = $_POST["matt"];
             $ma_hinh_anh = $_POST["maha"];
+            date_default_timezone_set('Asia/Ho_Chi_Minh');
+            $iddichvu = date("dmy").date('His');
+            
 
-            $result = $this->doituong->addService($ma_dich_vu,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh);
+            $result = $this->doituong->addService($iddichvu,$ma_dich_vu,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh);
 
             $this->view("admin_index",["page"=>"add_dichvu",
         "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
@@ -291,7 +321,66 @@ class admin extends controler{
         }  
     }
 
+    // hàm lấy danh sách dịch vụ 
+    function alldichvu(){
+        $this->view("admin_index",["page"=>"view_dichvu",
+        "alldichvu"=>$this->doituong->getAllDichVu(),
+        "booking_room"=>$this->doituong->getBookRoom(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]); 
+    }
 
+    // hamfm xóa dịch vụ 
+    function deletedicvu($id){
+        $this->view("admin_index",["page"=>"view_dichvu",
+        "result_de_dv"=>$this->doituong->delete_dichvu($id),
+        "alldichvu"=>$this->doituong->getAllDichVu(),
+        "booking_room"=>$this->doituong->getBookRoom(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]); 
+    }
+    // hàm update dịch vuj
+    function updatedichvu($id){
+        if( isset($_POST["addService"]) ){
+            $ma_dich_vu = $_POST["madv"];
+            $tieu_de = $_POST["tieude"];
+            $noidung = $_POST["noidung"];
+            $ma_thuoc_tinh = $_POST["matt"];
+            $ma_hinh_anh = $_POST["maha"];
+           
+            $iddichvu = $id;
+            
+
+            $result = $this->doituong->addService($iddichvu,$ma_dich_vu,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh);
+
+            $this->view("admin_index",["page"=>"view_dichvu",
+            "result"=>$result,
+            "booking_room"=>$this->doituong->getBookRoom(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+            "user_info"=>$_SESSION["ten"]]);
+            }else {
+                $this->view("admin_index",["page"=>"update_dichvu",
+                "onedichvu"=>$this->doituong->getOneDichVu($id),
+            "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
+            "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+            "booking_room"=>$this->doituong->getBookRoom(),
+            "number_booking"=>$this->doituong->getNumberBookingRoom(),
+            "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+            "alllienhe"=>$this->doituong->getAllLienHe(),
+            "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+            "user_info"=>$_SESSION["ten"]]);
+            }  
+    }
     //****************************************************************** END DỊCH VỤ   */
 
 
@@ -304,8 +393,9 @@ class admin extends controler{
             $noidung = $_POST["noi_dung"];
             $ma_thuoc_tinh = $_POST["ma_tt"];
             $ma_hinh_anh = $_POST["ma_ha"];
+            $id_km =  date("dmy").date('His');
 
-            $result = $this->doituong->addKhuyenMai($ma_km,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh);
+            $result = $this->doituong->addKhuyenMai($id_km,$ma_km,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh);
 
             $this->view("admin_index",["page"=>"add_khuyenmai",
         "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
@@ -328,6 +418,72 @@ class admin extends controler{
         }  
     }
 
+    // hàm hiển thị danh sách khuyến mãi
+        function allkm(){
+            $this->view("admin_index",["page"=>"view_km",
+        "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
+        "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "allkhuyenmai"=>$this->doituong->getAll_km(),
+        "allthuoctinh"=>$this->doituong->getAllThuocTinh(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]);
+        }
+
+    // hàm xóa khuyến mãi 
+    function delete_khuyenMai($id_km){
+        $result = $this->doituong->delete_km($id_km);
+        $this->view("admin_index",["page"=>"view_km",
+        "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
+        "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+        "number_booking"=>$this->doituong->getNumberBookingRoom(),
+        "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+        "alllienhe"=>$this->doituong->getAllLienHe(),
+        "allkhuyenmai"=>$this->doituong->getAll_km(),
+        "allthuoctinh"=>$this->doituong->getAllThuocTinh(),
+        "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+        "user_info"=>$_SESSION["ten"]]);
+    }   
+
+    // hàm cập nhật và chỉnh sửa khuyến mãi 
+    function update_km($id){
+        if(isset($_POST["btn_update_km"])){
+                $ma_km = $_POST["ma_km"];
+                $tieu_de = $_POST["tieu_de"];
+                $noi_dung = $_POST["noi_dung"];
+                $ma_thuoc_tinh = $_POST["ma_tt"];
+                $ma_hinh_anh= $_POST["ma_ha"];
+
+                $result  = $this->doituong->update_khuyenmai($id , $ma_km , $tieu_de , $ma_thuoc_tinh , $ma_hinh_anh, $noi_dung);
+                $this->view("admin_index",["page"=>"view_km",
+
+                "number_booking"=>$this->doituong->getNumberBookingRoom(),
+                "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+                "alllienhe"=>$this->doituong->getAllLienHe(),
+                "allkhuyenmai"=>$this->doituong->getAll_km(),
+                "result_up_km"=>$result,
+                "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+                "user_info"=>$_SESSION["ten"]]);
+                
+
+                }else{
+
+                $this->view("admin_index",["page"=>"update_km",
+                "maThuocTinh"=>$this->doituong->getMaThuocTinh(),
+                "maHinhAnh"=>$this->doituong->getMaHinhAnh(),
+                "number_booking"=>$this->doituong->getNumberBookingRoom(),
+                "number_lienhe"=>$this->doituong->getNumber_lienhe(),
+                "alllienhe"=>$this->doituong->getAllLienHe(),
+                "chitietnumberbooking"=>$this->doituong->getChitietNumberBooking(),
+                "chitietkhuyenmai"=>$this->doituong->getOneKm($id),
+
+
+
+                "user_info"=>$_SESSION["ten"]]);
+        }
+    }
 
     //****************************************************************** END KHUYẾN MÃI   */
 

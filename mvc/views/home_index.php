@@ -2,7 +2,7 @@
 <html lang="vi">
     <head>
         <meta charset="utf-8" />
-        <base href="http://localhost:8012/BTL/home_index">
+        <base href="http://localhost:8012/btl/home_index">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

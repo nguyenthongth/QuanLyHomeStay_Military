@@ -65,11 +65,7 @@
 	                                        <span class="title">View Booking</span>
 	                                    </a>
 	                                </li>
-	                                <li class="nav-item">
-	                                    <a href="edit_booking.html" class="nav-link ">
-	                                        <span class="title">Edit Booking</span>
-	                                    </a>
-	                                </li>
+	                                
 	                            </ul>
 	                        </li>
 							<!-- phong -->
@@ -109,15 +105,11 @@
 	                                    </a>
 	                                </li>
 	                                <li class="nav-item">
-	                                    <a href="all_rooms.html" class="nav-link ">
+	                                    <a href="./admin/allkm" class="nav-link ">
 	                                        <span class="title">Xem Danh Sách</span>
 	                                    </a>
 	                                </li>
-	                                <li class="nav-item">
-	                                    <a href="edit_room.html" class="nav-link ">
-	                                        <span class="title">Edit Room Details</span>
-	                                    </a>
-	                                </li>
+	                                
 	                            </ul>
 	                        </li>
 							<!--end khuyen mai -->
@@ -160,7 +152,7 @@
 	                                    </a>
 	                                </li>
 	                                <li class="nav-item">
-	                                    <a href="all_staffs.html" class="nav-link ">
+	                                    <a href="./admin/allimage" class="nav-link ">
 	                                        <span class="title">Xem Danh Sách</span>
 	                                    </a>
 	                                </li>
@@ -180,15 +172,11 @@
 	                                    </a>
 	                                </li>
 	                                <li class="nav-item">
-	                                    <a href="all_vehicles.html" class="nav-link ">
-	                                        <span class="title">View All Vehicle</span>
+	                                    <a href="./admin/alldichvu" class="nav-link ">
+	                                        <span class="title">Xem Danh Sách</span>
 	                                    </a>
 	                                </li>
-	                                <li class="nav-item">
-	                                    <a href="edit_vehicle.html" class="nav-link ">
-	                                        <span class="title">Edit Vehicle Details</span>
-	                                    </a>
-	                                </li>
+	                                
 	                            </ul>
 	                        </li>
 	                       

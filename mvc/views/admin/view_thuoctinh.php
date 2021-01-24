@@ -3,18 +3,7 @@
             <div class="page-content-wrapper">
                 <div class="page-content">
                     <div class="page-bar">
-                        <div class="page-title-breadcrumb">
-                            <div class=" pull-left">
-                                <div class="page-title">All Properties</div>
-                            </div>
-                            <ol class="breadcrumb page-breadcrumb pull-right">
-                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
-                                </li>
-                                <li><a class="parent-item" href="">Thuộc Tính </a>&nbsp;<i class="fa fa-angle-right"></i>
-                                </li>
-                                <li class="active">Xem Danh Sách</li>
-                            </ol>
-                        </div>
+                     
                     </div>
                      <div class="row">
                         <div class="col-md-12">
@@ -67,10 +56,13 @@
 												<td class="center"><?php echo $row["noi_dung"] ;  ?></td>											
 												<td class="center">
 													<a href="./admin/updatethuoctinh/<?php echo $row["id_thuoc_tinh"] ;?>"
+                                                    style="border-radius: 20px;"
                                                     class="btn btn-tbl-edit btn-xs">
                                                     <i class="fa fa-pencil"></i>
 													</a>
-													<a class="btn btn-tbl-delete btn-xs" onclick="xoa_thuoctinh(<?php echo $row['id_thuoc_tinh'] ; ?>)">
+													<a class="btn btn-tbl-delete btn-xs"
+                                                    style="border-radius: 20px;"
+                                                     onclick="xoa_thuoctinh(<?php echo $row['id_thuoc_tinh'] ; ?>)">
 														<i class="fa fa-trash-o "></i>
 													</a>
 												</td>
