@@ -30,7 +30,7 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	+HTML/CSS/JavaScript
 	+Bootstrap.
 
-##  Hướng dẫn cài đặt và sử dụng công cụ
+##  Hướng dẫn cài đặt và sử dụng dự án
 Đầu tiên ta vào link github: https://github.com/nguyenthongth/QuanLyHomeStay_Military sau đó click vào nút code **->** Download ZIP
 
 <p align="center">
@@ -140,13 +140,13 @@ Một số chức năng của trang quản lý
   <img alt="trangadmin" src="/images/tinnhan.jpg">
 </p>
 
-- đặt phòng
+- Đặt phòng
 
 <p align="center">
   <img alt="trangadmin" src="/images/datphong.jpg">
 </p>
 
-- phòng
+- Phòng
 + thêm phòng mới
 
 <p align="center">
@@ -160,3 +160,54 @@ Một số chức năng của trang quản lý
 </p>
 
 
+- Khuyến mãi
++ thêm khuyến mãi mới
+
+<p align="center">
+  <img alt="trangadmin" src="/images/themkhuyenmaimoi.jpg">
+</p>
+
++ xem danh sách khuyen mai
+
+<p align="center">
+  <img alt="trangadmin" src="/images/danhsachkhuyenmai.jpg">
+</p>
+
+- Thuộc tính
++ thêm thuộc tính mới
+
+<p align="center">
+  <img alt="trangadmin" src="/images/thuoctinhmoi.jpg">
+</p>
+
++ xem danh sách thuộc tính
+
+<p align="center">
+  <img alt="trangadmin" src="/images/xemthuoctinh.jpg">
+</p>
+
+- hình ảnh
++ thêm hình ảnh mới
+
+<p align="center">
+  <img alt="trangadmin" src="/images/themanhmoi.jpg">
+</p>
+
++ xem danh sách hình ảnh
+
+<p align="center">
+  <img alt="trangadmin" src="/images/xemdanhsachhinhanh.jpg">
+</p>
+
+- dịch vụ
++ thêm dịch vụ mới
+
+<p align="center">
+  <img alt="trangadmin" src="/images/themdichvu.jpg">
+</p>
+
++ xem danh sách dịch vụ
+
+<p align="center">
+  <img alt="trangadmin" src="/images/xemdanhsach.jpg">
+</p>
