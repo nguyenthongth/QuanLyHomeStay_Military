@@ -137,26 +137,26 @@ Một số chức năng của trang quản lý
 - Tin nhắn 
 
 <p align="center">
-  <img alt="trangadmin" src="/images/tinnhan.jpg">
+  <img alt="tinnhan" src="/images/tinnhan.jpg">
 </p>
 
 - Đặt phòng
 
 <p align="center">
-  <img alt="trangadmin" src="/images/datphong.jpg">
+  <img alt="datphong" src="/images/datphong.jpg">
 </p>
 
 - Phòng
 + thêm phòng mới
 
 <p align="center">
-  <img alt="trangadmin" src="/images/themphongmoi.jpg">
+  <img alt="themphongmoi" src="/images/themphongmoi.jpg">
 </p>
 
 + xem danh sách phòng
 
 <p align="center">
-  <img alt="trangadmin" src="/images/xemdanhsachphong.jpg">
+  <img alt="xemdanhsachphong" src="/images/xemdanhsachphong.jpg">
 </p>
 
 
@@ -164,50 +164,50 @@ Một số chức năng của trang quản lý
 + thêm khuyến mãi mới
 
 <p align="center">
-  <img alt="trangadmin" src="/images/themkhuyenmaimoi.jpg">
+  <img alt="themkhuyenmaimoi" src="/images/themkhuyenmaimoi.jpg">
 </p>
 
 + xem danh sách khuyen mai
 
 <p align="center">
-  <img alt="trangadmin" src="/images/danhsachkhuyenmai.jpg">
+  <img alt="danhsachkhuyenmai" src="/images/danhsachkhuyenmai.jpg">
 </p>
 
 - Thuộc tính
 + thêm thuộc tính mới
 
 <p align="center">
-  <img alt="trangadmin" src="/images/thuoctinhmoi.jpg">
+  <img alt="thuoctinhmoi" src="/images/thuoctinhmoi.jpg">
 </p>
 
 + xem danh sách thuộc tính
 
 <p align="center">
-  <img alt="trangadmin" src="/images/xemthuoctinh.jpg">
+  <img alt="xemthuoctinh" src="/images/xemthuoctinh.jpg">
 </p>
 
 - hình ảnh
 + thêm hình ảnh mới
 
 <p align="center">
-  <img alt="trangadmin" src="/images/themanhmoi.jpg">
+  <img alt="themanhmoi" src="/images/themanhmoi.jpg">
 </p>
 
 + xem danh sách hình ảnh
 
 <p align="center">
-  <img alt="trangadmin" src="/images/xemdanhsachhinhanh.jpg">
+  <img alt="xemdanhsachhinhanh" src="/images/xemdanhsachhinhanh.jpg">
 </p>
 
 - dịch vụ
 + thêm dịch vụ mới
 
 <p align="center">
-  <img alt="trangadmin" src="/images/themdichvu.jpg">
+  <img alt="themdichvu" src="/images/themdichvu.jpg">
 </p>
 
 + xem danh sách dịch vụ
 
 <p align="center">
-  <img alt="trangadmin" src="/images/xemdanhsach.jpg">
+  <img alt="xemdanhsach" src="/images/xemdanhsach.jpg">
 </p>
