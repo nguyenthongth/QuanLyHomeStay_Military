@@ -48,26 +48,16 @@
 	                            </a>
 	                            
 	                        </li>
-	                        <li class="nav-item">
-	                            <a href="#" class="nav-link nav-toggle">
-	                                <i class="material-icons">business_center</i>
-	                                <span class="title">Booking</span>
-	                                <span class="arrow"></span>
+							
+							<li class="nav-item">
+	                            <a href="./admin/datphong" class="nav-link nav-toggle">
+								<i class="material-icons">business_center</i>
+	                                <span class="title">Đặt phòng</span>
+	                             
 	                            </a>
-	                            <ul class="sub-menu">
-	                                <li class="nav-item">
-	                                    <a href="new_booking.html" class="nav-link ">
-	                                        <span class="title">New Booking</span>
-	                                    </a>
-	                                </li>
-	                                <li class="nav-item">
-	                                    <a href="view_booking.html" class="nav-link ">
-	                                        <span class="title">View Booking</span>
-	                                    </a>
-	                                </li>
-	                                
-	                            </ul>
+	                            
 	                        </li>
+	                        
 							<!-- phong -->
 	                        <li class="nav-item">
 	                            <a href="#" class="nav-link nav-toggle">

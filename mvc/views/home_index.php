@@ -2,7 +2,7 @@
 <html lang="vi">
     <head>
         <meta charset="utf-8" />
-        <base href="http://localhost:8012/btl/home_index">
+        <base href="http://localhost/btl/home_index">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,7 +10,6 @@
 
         <link rel="shortcut icon" type="image/x-icon" href="public/assets/images/logo1.png" />
         <link rel="icon" type="image/x-icon" href="public/assets/images/icon.png" />
-        <link id="ImageLink" rel="image_src" type="image/jpg" href="https://demo.sweetsoft.vn/masova-hotel/public/assets/images/share.jpg" />
         <link rel="alternate" href="https://demo.sweetsoft.vn/masova-hotel/index.htm" hreflang="vi-en" />
         <link href="https://demo.sweetsoft.vn/masova-hotel/index.htm" rel="canonical" id="canonicalLink" />
   
@@ -20,6 +19,8 @@
         <link rel="stylesheet" type="text/css" href="public/assets/css/service-list.css" />
         <link rel="stylesheet" type="text/css" href="public/assets/css/service-detail.css" />
         <link rel="stylesheet" type="text/css" href="public/assets/css/promotion-detail.css" />
+        <link rel="stylesheet" type="text/css" href="public/assets/css/image-list.css" />
+        <link rel="stylesheet" type="text/css" href="public/assets/css/image-detail.css" />
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

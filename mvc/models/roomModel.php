@@ -2,7 +2,7 @@
 class roomModel extends connectDB{
     
     function getListRoom(){
-        $sql = 'SELECT ma_phong , ten_phong FROM phong ';
+        $sql = 'SELECT *  FROM phong ';
         $result = $this->connect->query($sql);
 
         // trả về mảng phòng

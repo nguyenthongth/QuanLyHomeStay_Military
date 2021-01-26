@@ -88,9 +88,23 @@
                                     <div class="wrapTitleType1 titleMainRoomDetail"><?php echo $row1["ten_phong"] ?></div>
                                     
                                     <div class="wrapPriceRoomDetail">
-                                        Giá:
-                                        <div class="valPriceRoomDetail"><?php echo substr($row1["gia_phong"],0,3).",".substr($row1["gia_phong"],3,3) ?> VNĐ</div>
+                                     <div class="valPriceRoomDetail"><span style="color: black; font-size: 16px;">Giá Phòng:</span>
+                                     <?php echo substr($row1["gia_phong"],0,3).",".substr($row1["gia_phong"],3,3) ?> VNĐ</div>
                                     </div>
+                                    <div class="wrapPriceRoomDetail">
+                                    <?php
+                                            if(isset($data["thuocTinh_room"])){
+                                                $image  = json_decode($data["thuocTinh_room"], true);
+                                                if(!empty($image)){
+                                                    foreach($image as $row3){
+                                                        echo $row3["ten_thuoc_tinh"].": ".$row3["noi_dung"]."</br>";
+                                                    }
+                                                }
+                                            }
+                                        
+                                        ?>  
+            
+                                       </div>
                                     
                                 </div>
 
@@ -190,93 +204,7 @@
         				</ul>
                     </div>
                     
-                    <div class="wrapRoomWouldLike">
-                        <div class="wrapTitleType2 titleMainRoomWouldLike">Có thể bạn thích</div>
-
-                        <div class="wrapSlideRoomWouldLike">
-                            <div class="showSlideRoomWouldLike">
-                                <div class="itemSlideRoomWouldLike">
-                                    <div class="contentItemProject">
-                                        <a href="phong.htm" title="Deluxe" class="wrapImgResize imgSquare wrapImgResizeItemProject">
-                                            <img src="public/assets/images/project-2.jpg" class="imgItemProject" alt="Deluxe" />
-                                        </a>
-
-                                        <div class="wrapTextItemProject">
-                                            <a href="phong.htm" class="linkTitleItemProject" title="Deluxe"><h4 class="titleHeaddingItemProject">Deluxe</h4></a>
-                                            
-                                            <div class="wrapInfoRoomItem">
-                                                <span class="textInfRoomItem"><i class="fas fa-compress"></i> 20 m2</span>
-
-                                                <span class="textInfRoomItem"><i class="far fa-eye"></i> View thành phố</span>
-                                            </div>
-
-                                            <div class="priceRoomItem">Giá <div class="textPriceRoomItem">280,000 VNĐ</div></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="itemSlideRoomWouldLike">
-                                    <div class="contentItemProject">
-                                        <a href="phong.htm" title="Deluxe hướng biển" class="wrapImgResize imgSquare wrapImgResizeItemProject">
-                                            <img src="public/assets/images/project-3.jpg" class="imgItemProject" alt="Deluxe hướng biển" />
-                                        </a>
-
-                                        <div class="wrapTextItemProject">
-                                            <a href="phong.htm" class="linkTitleItemProject" title="Deluxe hướng biển"><h4 class="titleHeaddingItemProject">Deluxe hướng biển</h4></a>
-
-                                            <div class="wrapInfoRoomItem">
-                                                <span class="textInfRoomItem"><i class="fas fa-compress"></i> 20 m2</span>
-
-                                                <span class="textInfRoomItem"><i class="far fa-eye"></i> View thành phố</span>
-                                            </div>
-
-                                            <div class="priceRoomItem">Giá <div class="textPriceRoomItem">280,000 VNĐ</div></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="itemSlideRoomWouldLike">
-                                    <div class="contentItemProject">
-                                        <a href="phong.htm" title="Senior Deluxe hướng biển" class="wrapImgResize imgSquare wrapImgResizeItemProject">
-                                            <img src="public/assets/images/project-4.jpg" class="imgItemProject" alt="Senior Deluxe hướng biển" />
-                                        </a>
-
-                                        <div class="wrapTextItemProject">
-                                            <a href="phong.htm" class="linkTitleItemProject" title="Senior Deluxe hướng biển"><h4 class="titleHeaddingItemProject">Senior Deluxe hướng biển</h4></a>
-
-                                            <div class="wrapInfoRoomItem">
-                                                <span class="textInfRoomItem"><i class="fas fa-compress"></i> 20 m2</span>
-
-                                                <span class="textInfRoomItem"><i class="far fa-eye"></i> View thành phố</span>
-                                            </div>
-
-                                            <div class="priceRoomItem">Giá <div class="textPriceRoomItem">280,000 VNĐ</div></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="itemSlideRoomWouldLike">
-                                    <div class="contentItemProject">
-                                        <a href="phong.htm" title="Suite Hướng biển" class="wrapImgResize imgSquare wrapImgResizeItemProject">
-                                            <img src="public/assets/images/project-1.jpg" class="imgItemProject" alt="Suite Hướng biển" />
-                                        </a>
-
-                                        <div class="wrapTextItemProject">
-                                            <a href="phong.htm" class="linkTitleItemProject" title="Suite Hướng biển"><h4 class="titleHeaddingItemProject">Suite Hướng biển</h4></a>
-
-                                            <div class="wrapInfoRoomItem">
-                                                <span class="textInfRoomItem"><i class="fas fa-compress"></i> 20 m2</span>
-
-                                                <span class="textInfRoomItem"><i class="far fa-eye"></i> View thành phố</span>
-                                            </div>
-
-                                            <div class="priceRoomItem">Giá <div class="textPriceRoomItem">280,000 VNĐ</div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 
                 </div>
             </div>
         </div>

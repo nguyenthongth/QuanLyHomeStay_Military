@@ -17,12 +17,109 @@ class adminModel extends connectDB{
         return $User;
     }
 
+    // tao tai khoan admin moi 
+    function taotaikhoan_admin($user, $pass, $email , $sdt , $ten){
+        $sql = "INSERT INTO `administrator`(`username`, `pass`, `email`, `sdt`, `ten`) 
+        VALUES ('$user','$pass','$email' , '$sdt' ,'$ten' )";
+        $result = $this->connect->query($sql);
+        if($result){
+            return true;
+        } else{
+            return false;
+        }
+
+    }
+
+    //**************************************** Card View Info _+++++++++****************** */
+
+        function getToatalDoanhThu(){
+           $sql = ' SELECT SUM(gia_tien) AS total FROM dat_phong WHERE thanh_toan ="Thanh Toán Ngay" ';
+           $result  = $this->connect->query($sql);
+            $info = array();
+            if ($result->num_rows > 0) {
+               
+                while($row = $result->fetch_assoc()) {           
+                    $info[] = $row;
+                }
+            } else {
+                return false;
+            }
+            return json_encode($info);
+
+        }
+
+        // hàm tính doanh thu chưa thanh toán 
+        function getToatal_chuaThanhToan(){
+            $sql = ' SELECT SUM(gia_tien) AS total FROM dat_phong WHERE thanh_toan ="Thanh Toán Sau" ';
+            $result  = $this->connect->query($sql);
+             $info = array();
+             if ($result->num_rows > 0) {
+                
+                 while($row = $result->fetch_assoc()) {           
+                     $info[] = $row;
+                 }
+             } else {
+                 return false;
+             }
+             return json_encode($info);
+        }
+        
+        // tính tổng số đơn đặt phòng 
+        function getToatal_datphong(){
+            $sql = ' SELECT COUNT(*)  AS total FROM dat_phong ';
+            $result  = $this->connect->query($sql);
+             $info = array();
+             if ($result->num_rows > 0) {
+                
+                 while($row = $result->fetch_assoc()) {           
+                     $info[] = $row;
+                 }
+             } else {
+                 return false;
+             }
+             return json_encode($info);
+        }
+
+        
+        // tính tổng số đơn tin nhắn 
+        function getToatal_tinnhan(){
+            $sql = ' SELECT COUNT(*) AS total FROM lien_he ';
+            $result  = $this->connect->query($sql);
+             $info = array();
+             if ($result->num_rows > 0) {
+                
+                 while($row = $result->fetch_assoc()) {           
+                     $info[] = $row;
+                 }
+             } else {
+                 return false;
+             }
+             return json_encode($info);
+        }
+      //**************************************** END Card View Info _+++++++++****************** */
 
 
     //****************************************** Phần Dành cho book room **************************** */
         // hàm trả dánh sách đặt phòng 
         function getBookRoom(){
             $sql  = "SELECT * FROM dat_phong";
+            $result  = $this->connect->query($sql);
+            $booking = array();
+            if ($result->num_rows > 0) {
+               
+                while($row = $result->fetch_assoc()) {           
+                    $booking[] = $row;
+                }
+            } else {
+                return false;
+            }
+            return json_encode($booking);
+
+        }
+
+          // hàm trả dánh sách đặt phòng 
+          function getBookRoom1(){
+            $sql  = "SELECT * FROM dat_phong ORDER BY thanh_toan DESC LIMIT 10 ";
             $result  = $this->connect->query($sql);
             $booking = array();
             if ($result->num_rows > 0) {
@@ -76,7 +173,31 @@ class adminModel extends connectDB{
             }
         }
 
+        // cập nhật thông tin booking 
+        function updateBooking($ma_dp,$ngay_check_in, $so_lp,
+        $ngay_check_out ,$sdt, $nguoi_lon,$hoten, $treem , $ngay_dat,$loai_phong  , $ghichu, $email ){
+            $sql ="UPDATE `dat_phong` SET thoi_gian_vao='$ngay_check_in',
+            thoi_gian_ra='$ngay_check_out',ma_phong='$loai_phong',so_luong_phong='$so_lp',nguoi_lon='$nguoi_lon',
+            tre_em='$treem',ho_ten='$hoten',email='$email',sdt='$sdt',ghichu='$ghichu',
+            thoi_gian_dat='$ngay_dat' WHERE ma_dat_phong='$ma_dp'";
+            $result = $this->connect->query($sql);
+            if($result){
+                return true;
+            } else{
+                return false;
+            }
+        }
 
+    // thanh toán phòng 
+    function thanhtoan_phong($ma){
+        $sql = "UPDATE dat_phong SET thanh_toan ='Thanh Toán Ngay' WHERE ma_dat_phong='$ma'";
+        $result = $this->connect->query($sql);
+            if($result){
+                return true;
+            } else{
+                return false;
+            }
+    }
     //******************************************END  Phần Dành cho book room **************************** */
 
     // ******************** Phần dành cho hình ảnh ***************************************
@@ -205,6 +326,18 @@ class adminModel extends connectDB{
         }
         
         return json_encode($info);
+    }
+    // cập nhật dịch vụ 
+    function update_Service($iddichvu,$ma_dich_vu,$tieu_de,$noidung,$ma_thuoc_tinh,$ma_hinh_anh){
+        $sql = "UPDATE dich_vu SET ma_dich_vu='$ma_dich_vu',tieu_de='$tieu_de',
+        noi_dung='$noidung',ma_thuoc_tinh='$ma_thuoc_tinh',ma_hinh_anh='$ma_hinh_anh' WHERE id_dich_vu='$iddichvu'";
+         $result = $this->connect->query($sql);
+
+         if($result){
+             return true;
+         } else{
+             return false;
+         }
     }
     // ********************END  Phần dành cho dịch vụ ***************************************
 

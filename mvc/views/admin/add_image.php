@@ -7,7 +7,7 @@
                      <div class="row">
 						<div class="col-sm-12">
 							<div class="card-box">
-								<div class="card-head">
+								<div class="card-head"  style="background-color: #008000;border-radius: 5px; padding: 2px;">
 									<header>Add Image</header>
 									 </ul>
                                 </div>

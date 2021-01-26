@@ -2,11 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <base href="http://localhost:8012/btl/login">
+    <base href="http://localhost/btl/login">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="description" content="Responsive Admin Template" />
-    <meta name="author" content="SmartUniversity" />
     <title>Đăng Nhập | Quản Lý HomeStay</title>
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" type="text/css" />
@@ -46,7 +44,7 @@
 
 <?php 
     if( isset($data["errow"])){
-        if($data["errow"]==0){
+        if(!$data["errow"]){
             echo '<script type="text/javascript">    thongbao();      </script>';
         }
     }

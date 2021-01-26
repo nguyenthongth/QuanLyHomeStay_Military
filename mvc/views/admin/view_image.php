@@ -58,9 +58,7 @@
                                                    
                                                     
                                                     <td class="center">
-                                                        <a href="./admin/updateRooms/'.$row_r["ma_hinh_anh"].'" class="btn btn-tbl-edit btn-xs">
-                                                            <i class="fa fa-pencil"></i>
-                                                        </a>
+                                                       
                                                         <button class="btn btn-tbl-delete btn-xs" 
                                                         onclick="deleteRoom('.$row_r["id_hinh_anh"].')">
                                                             <i class="fa fa-trash-o "></i>

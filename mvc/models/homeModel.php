@@ -2,7 +2,7 @@
 class homeModel extends connectDB{
     
     function getListRoom(){
-        $sql = 'SELECT ma_phong , ten_phong FROM phong ';
+        $sql = 'SELECT * FROM phong ';
         $result = $this->connect->query($sql);
 
         // trả về mảng phòng
@@ -22,11 +22,12 @@ class homeModel extends connectDB{
 
     // book room oder 
 
-    function bookroom($ma_dp, $check_in, $check_out,$loai_p,$slp,$nguoi_lon,$tre_em,$hoten,$email,$sdt,$ghichu, $tgdat){
+    function bookroom($ma_dp, $check_in, $check_out,$loai_p,$slp,$nguoi_lon,$tre_em,
+    $hoten,$email,$sdt,$ghichu, $tgdat , $giatien ,$thanh_toan){
          $sql = "INSERT INTO dat_phong (ma_dat_phong, thoi_gian_vao, thoi_gian_ra, ma_phong, 
-        so_luong_phong, nguoi_lon, tre_em, ho_ten, email, sdt, ghichu, thoi_gian_dat) 
+        so_luong_phong, nguoi_lon, tre_em, ho_ten, email, sdt, ghichu, thoi_gian_dat, gia_tien ,thanh_toan) 
         VALUES ('$ma_dp','$check_in','$check_out','$loai_p','$slp','$nguoi_lon','$tre_em','$hoten','$email'
-        ,'$sdt','$ghichu','$tgdat')";
+        ,'$sdt','$ghichu','$tgdat','$giatien' ,'$thanh_toan')";
 
         $result = $this->connect->query($sql);
          if($result){

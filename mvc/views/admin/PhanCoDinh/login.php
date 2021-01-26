@@ -16,18 +16,15 @@
 						<input class="input100" type="password" name="pass" placeholder="Password">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
-					</div>
+					
 					<div class="container-login100-form-btn">
 						<button type="submit"  name="login-admin" class="login100-form-btn">
-							Login
+							Đăng Nhập
 						</button>
+						
 					</div>
 					<div class="text-center p-t-90">
+					<a class="txt1" href="./admin/taotaikhoan">Chưa có tài khoản? Đăng kí</a> ||
 						<a class="txt1" href="#">
 							Hỗ trợ 18001089 or Anh Quan TR123
 						</a>

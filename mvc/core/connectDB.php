@@ -5,7 +5,7 @@ class connectDB{
     protected $servername = "localhost";
     protected $dbname = "btl";
     protected  $username = "root";
-    protected $password = "";
+    protected $password = "123456";
 
     // contructor 
     function __construct()

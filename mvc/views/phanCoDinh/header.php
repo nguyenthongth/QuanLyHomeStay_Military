@@ -50,21 +50,14 @@
                                     <a class="listLinkMenuMainHeaderBottom" href="./dichvu" title="Dịch vụ">Dịch vụ</a>
                                 </li>
 
+                        
+
                                 <li class="listItemMenuMainHeaderBottom">
                                     <a class="listLinkMenuMainHeaderBottom" href="./khuyenmai" title="Khuyến mãi">Khuyến mãi</a>
                                 </li>
-
-                                <li class="listItemMenuMainHeaderBottom menuSubHeaderBottom">
-                                    <a class="listLinkMenuMainHeaderBottom" href="javascript:void(0)" title="Thư viện">Thư viện</a>
-                                    <div class="btnDropdowMenuSubHeaderBottom"><i class="fas fa-chevron-down"></i></div>
-
-                                    <div class="wrapListMenuSubHeaderBottom">
-                                        <ul class="listMenuSubHeaderBottom">
-                                            <li class="listItemMenuSubHeaderBottom"><a class="listLinkMenuSubHeaderBottom" href="ds-hinh-anh.htm" title="Thư viện hình ảnh">Thư viện hình ảnh</a></li>
-
-                                            <li class="listItemMenuSubHeaderBottom"><a class="listLinkMenuSubHeaderBottom" href="ds-video.htm" title="Thư viện video">Thư viện video</a></li>
-                                        </ul>
-                                    </div>
+                                
+                                <li class="listItemMenuMainHeaderBottom">
+                                    <a class="listLinkMenuMainHeaderBottom" href="./hinhanh" title="Khuyến mãi">Hình ảnh</a>
                                 </li>
 
                                 <li class="listItemMenuMainHeaderBottom">

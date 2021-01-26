@@ -51,8 +51,26 @@ class home_index extends controler{
             date_default_timezone_set('Asia/Ho_Chi_Minh');
             $ma_dat_p = date("dmy").date('His');
             $ngaydat = date("d/m/Y");
+            $giatien = $_POST["giatien"];
+           
+           // echo $phong;
+           // echo strlen($phong); // đếm kĩ tự trong chuỗi 
+            $array_phong = str_split($phong);
+            $dem  = 1;
+            $dem2 = 0;
+            foreach ( $array_phong as $row_dem ){
+                if($row_dem== "/"){
+                    $dem2 = $dem;
+                }
+                $dem ++;
+            }
+            $phong2 = substr($phong,0,$dem2-1);
+            $thanh_toan = $_POST["thanhtoan"];
 
-           $result = $this->doituong->bookroom($ma_dat_p, $check_in, $check_out,$phong,$so_luong_phong,$nguoi_lon,$treem,$ho_ten,$email,$sdt,$ghi_chu, $ngaydat);
+            
+            
+           $result = $this->doituong->bookroom($ma_dat_p, $check_in, $check_out,$phong2,$so_luong_phong,
+           $nguoi_lon,$treem,$ho_ten,$email,$sdt,$ghi_chu, $ngaydat,$giatien , $thanh_toan);
            
            $this->view("home_index",["page"=>"home_view",
            "result"=>$result,

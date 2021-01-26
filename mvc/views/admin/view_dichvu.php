@@ -86,10 +86,10 @@
 
         <script type="text/javascript">
             function thanhcong_up(){
-                swal("Thành Công","Phòng của bạn đã được cập nhật" , "success");
+                swal("Thành Công","Dịch vụ của bạn đã được cập nhật" , "success");
             }
             function  thatbai_up(){
-                swal("Lỗi......","Đã có lỗi xảy ra khi cập nhật phòng của bạn" , "warning");
+                swal("Lỗi......","Đã có lỗi xảy ra khi cập nhật dịch vụ của bạn" , "warning");
             }
 
             function thanhcong_de(){
@@ -125,7 +125,14 @@
                         echo '<script type="text/javascript"> thatbai_de(); </script>';
                     }
                 }
-
+                
+                if(isset($data["result_up_dv"])){
+                    if($data["result_up_dv"]){
+                        echo '<script type="text/javascript"> thanhcong_up(); </script>';
+                    }else{
+                        echo '<script type="text/javascript"> thatbai_up(); </script>';
+                    }
+                }
 
             ?>
              

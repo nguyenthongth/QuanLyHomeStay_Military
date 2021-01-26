@@ -22,8 +22,8 @@
                                     <div class="contentInputBookRoom">
                                         <div class="wrapIconFrmCtrBookRoom"><i class="far fa-calendar-alt"></i></div>
     
-                                        <input type="text" readonly="true" class="form-control inputChooseDateCheckIn"
-                                         placeholder="Check-in" name="checkin"/>
+                                        <input type="text" readonly="true" onchange="checkGia()" class="form-control inputChooseDateCheckIn"
+                                         placeholder="Check-in" name="checkin" id="checkin"/>
                                     </div>
                                 </div>
     
@@ -31,8 +31,8 @@
                                     <div class="contentInputBookRoom">
                                         <div class="wrapIconFrmCtrBookRoom"><i class="far fa-calendar-alt"></i></div>
     
-                                        <input type="text" readonly="true" class="form-control inputChooseDateCheckOut"
-                                         placeholder="Check-out" name="checkout"/>
+                                        <input type="text" readonly="true" onchange="checkGia()" class="form-control inputChooseDateCheckOut"
+                                         placeholder="Check-out" name="checkout" id="checkout"/>
                                     </div>
                                 </div>
     
@@ -80,14 +80,18 @@
                                 <div class="col-md-6 colInputBookRoom">
                                     <div class="contentInputBookRoom">
                                         <div class="wrapIconFrmCtrBookRoom"><i class="fas fa-home"></i></div>
-                                        <?php $listroom  = json_decode($data["listroom"] ,true)?>
-                                        <select class="form-control selectPciker formControlRoomSelect"
-                                         name="phong">
+                                        <?php $listroom  = json_decode($data["listroom"] ,true); 
+                                        
+                                        ?>
+                                        <select class="form-control selectPciker formControlRoomSelect"  
+                                        id="phong" onchange="checkGia()"  name="phong">
                                             <option>Chọn phòng</option>
-                                            <?php foreach($listroom as $row){ ?>
-                                                <option  value="<?php echo $row["ma_phong"] ?>">
-                                                <?php echo $row["ten_phong"] ?></option>
-                                            <?php } ?>
+                                            <?php foreach($listroom as $row){                                                                                                                                         
+                                               ?>
+                                                <option  
+                                                value="<?php echo $row["ma_phong"]; ?>/<?php echo $row["gia_phong"]; ?>">
+                                                <?php echo $row["ten_phong"];?></option>
+                                            <?php   } ?>
                                         </select>
                                     </div>
                                 </div>
@@ -96,7 +100,7 @@
                                     <div class="contentInputBookRoom">
                                         <div class="wrapIconFrmCtrBookRoom"><i class="fas fa-sort-numeric-up-alt"></i></div>
     
-                                        <input type="number" class="form-control" 
+                                        <input type="number" class="form-control" id="slp" onchange="checkGia()"
                                         name="slp" placeholder="Số lượng phòng" />
                                     </div>
                                 </div>
@@ -132,10 +136,38 @@
                                         <input type="text" class="form-control" name="ghichu" placeholder="Nhập ghi chú" />
                                     </div>
                                 </div>
-    
-                                <div class="col-md-12 colInputBookRoom colBtnBookRoom">
+
+                                <div class="col-md-6 colInputBookRoom">
                                     <div class="contentInputBookRoom">
-                                        <button type="submit" name="datngay" class="btnType1 btnBookNowRoomForm">Đặt Phòng Ngay</button>
+                                        <div class="wrapIconFrmCtrBookRoom"><i class="fa fa-money"></i></div>
+    
+                                           <input class="form-control" name="giatien" id="giatien" style="font-weight: bold;"
+                                        ></input> 
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 colInputBookRoom">
+                                    <div class="contentInputBookRoom">
+                                        <div class="wrapIconFrmCtrBookRoom"><i class="fas fa-plus-circle"></i></div>
+    
+                                        <select class="form-control selectPciker inputNumberChildren" 
+                                        name="thanhtoan">
+                                            <option>Thanh Toán</option>
+                                            <option>Thanh Toán Ngay</option>
+                                            <option>Thanh Toán Sau</option>
+                                            
+                                        </select>
+                                    </div>
+                                </div> 
+
+    
+                                <div class="col-md-12 colInputBookRoom colBtnBookRoom" id="test">
+                                    <div class="contentInputBookRoom">
+                                        <button type="submit" name="datngay" 
+                                        class="btnType1 btnBookNowRoomForm">Đặt Phòng Ngay</button>
+                                    </div>
+                                    <div class="contentInputBookRoom" id="check">
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +180,10 @@
 
 
 <!-- checck kiem tra input -->
+
+
+
+
 <script type="text/javascript">
     function check_input(){
         var checkin = document.forms["datphong"]["checkin"].value;
@@ -192,7 +228,34 @@
             "Hãy để lại số điện thoại chúng tôi sẽ liên lạc với bạn !");
             return false;
         }
+        var thanhtoan = document.forms["datphong"]["thanhtoan"].value;
+        if (thanhtoan== "Thanh Toán"|| thanhtoan == "" ) {
+            swal("Lỗi..........!", 
+            "Hãy chọn phương thức thanh toán  !");
+            return false;
+        }
         return true
+    }
+
+    function checkGia(){
+        var check = document.getElementById("phong").value;
+        var giaphong  = check.slice(check.indexOf("/")+1);
+        var so_luong =  document.getElementById("slp").value;
+        var check_in  = document.getElementById("checkin").value;
+        var check_out  = document.getElementById("checkout").value;
+        
+        
+        if(so_luong <=  0 ){
+            swal("Lỗi Phòng không thể nhở hơn 0 ");
+        }
+        
+        if(so_luong >  0){
+           var  giatien = so_luong*giaphong; 
+           document.getElementById("giatien").value = giatien;
+        }
+        
+       
+       
     }
 
     function dat_thanh_cong(){
@@ -205,6 +268,8 @@
 </script>
 
 <?php 
+
+   
     if(isset($data["result"])){
         if($data["result"]){
             $ma = $data["madatphong"];
@@ -214,6 +279,5 @@
             echo '<script type="text/javascript">    dat_that_bai();      </script>';
         }
     }
-
 
 ?>

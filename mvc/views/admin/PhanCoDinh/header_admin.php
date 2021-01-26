@@ -163,7 +163,7 @@
                         </li>
                         <!-- end message dropdown -->
  						<!-- start manage user dropdown -->
- 						<li class="dropdown dropdown-user">
+ 						<!--<li class="dropdown dropdown-user">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                 <img alt="" class="img-circle " src="public/admin/assets/img/dp.jpg" />
                                 <span class="username username-hide-on-mobile"> John </span>
@@ -195,13 +195,13 @@
                                         <i class="icon-logout"></i> Log Out </a>
                                 </li>
                             </ul>
-                        </li> 
-                        <!-- end manage user dropdown -->
+                        </li>  -->
+                        <!-- end manage user dropdown 
                         <li class="dropdown dropdown-quick-sidebar-toggler">
                              <a id="headerSettingButton" class="mdl-button mdl-js-button mdl-button--icon pull-right" data-upgraded=",MaterialButton">
 	                           <i class="material-icons">settings</i>
 	                        </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
