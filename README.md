@@ -31,5 +31,8 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 	+Bootstrap.
 
 ##  Hướng dẫn cài đặt và sử dụng công cụ
-Đầu tiên ta vào link github: https://github.com/nguyenthongth/QuanLyHomeStay_Military sau đó click vào nút code -> Download ZIP
+Đầu tiên ta vào link github: https://github.com/nguyenthongth/QuanLyHomeStay_Military sau đó click vào nút code **->** Download ZIP
 ![Download ZIP](/images/DownloadZIP.png)
+**Bước 1** Cài đặt và khởi động môi trường giả lập **XAMPP Control Panel**, khởi chạy **Star** 2 dịch vụ quan trọng là **Apache** và **MySQL**
+![XAMPP](/images/XAMPP.jpg)
+**Bước 2** sau khi clone code về và mở bằng một phần mềm soạn thảo code( vscode, sublime text...)
