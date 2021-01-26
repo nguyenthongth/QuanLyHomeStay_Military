@@ -32,4 +32,4 @@ với kiến ​​trúc MVC  được tích hợp nhiều tính năng cho khác
 
 ##  Hướng dẫn cài đặt và sử dụng công cụ
 Đầu tiên ta vào link github: https://github.com/nguyenthongth/QuanLyHomeStay_Military sau đó click vào nút code -> Download ZIP
-![Dơnload ZIP](/images.)
+![Dơnload ZIP](/images/Download ZIP.png)
