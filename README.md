@@ -97,19 +97,19 @@ Giao diện trang web sẽ hiện ra
 </p>
 
 <p align="center">
-  <img alt="vscode" src="/images/phong.jpg">
+  <img alt="phong" src="/images/phong.jpg">
 </p>
 
 <p align="center">
-  <img alt="vscode" src="/images/dichvu.jpg">
+  <img alt="dichvu" src="/images/dichvu.jpg">
 </p>
 
 <p align="center">
-  <img alt="vscode" src="/images/khuyenmai.jpg">
+  <img alt="khuyenmai" src="/images/khuyenmai.jpg">
 </p>
 
 <p align="center">
-  <img alt="vscode" src="/images/hinhanh.jpg">
+  <img alt="vscode" src="/images/lienhe.jpg">
 </p>
 
 <p align="center">
@@ -119,16 +119,44 @@ Giao diện trang web sẽ hiện ra
 **Bước 7** Thay đổi đường link để vào trang quản lý http://localhost:8012/BTL/admin trước khi vào trang quản lý phải đăng nhập tài khoản đăng nhập nằm trong csdl 
 
 <p align="center">
-  <img alt="vscode" src="/images/csdladmin.jpg">
+  <img alt="csdladmin" src="/images/csdladmin.jpg">
 </p>
 
 
 <p align="center">
-  <img alt="vscode" src="/images/login.jpg">
+  <img alt="login" src="/images/login.jpg">
 </p>
 
 **Bước 8** Sau khi đăng nhập thành không ta sẽ vào được trang quản lý 
 
 <p align="center">
-  <img alt="vscode" src="/images/trangadmin.jpg">
+  <img alt="trangadmin" src="/images/trangadmin.jpg">
 </p>
+
+Một số chức năng của trang quản lý
+- Tin nhắn 
+
+<p align="center">
+  <img alt="trangadmin" src="/images/tinnhan.jpg">
+</p>
+
+- đặt phòng
+
+<p align="center">
+  <img alt="trangadmin" src="/images/datphong.jpg">
+</p>
+
+- phòng
++ thêm phòng mới
+
+<p align="center">
+  <img alt="trangadmin" src="/images/themphongmoi.jpg">
+</p>
+
++ xem danh sách phòng
+
+<p align="center">
+  <img alt="trangadmin" src="/images/xemdanhsachphong.jpg">
+</p>
+
+
