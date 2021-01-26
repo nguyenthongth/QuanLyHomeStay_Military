@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-    <base href="http://localhost/btl/login">
+    <base href="http://localhost:8012/btl/login">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Đăng Nhập | Quản Lý HomeStay</title>
